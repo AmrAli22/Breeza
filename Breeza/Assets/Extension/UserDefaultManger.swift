@@ -63,49 +63,6 @@ class UserDefaultsManager {
     }
     
     
-    
-//    // Function to save an array of objects to UserDefaults
-//     func saveRegisterModel(_ registerModel : RegisterModel) {
-//        let encoder = JSONEncoder()
-//        if let encoded = try? encoder.encode(registerModel) {
-//            UserDefaults.standard.set(encoded, forKey: "registerModel")
-//        }
-//    }
-//    
-//    // Function to retrieve an array of objects from UserDefaults
-//     func getRegisterModel() -> RegisterModel? {
-//        if let savedData = UserDefaults.standard.data(forKey: "registerModel") {
-//            let decoder = JSONDecoder()
-//            if let people = try? decoder.decode(RegisterModel.self, from: savedData) {
-//                return people
-//            }
-//        }
-//        return nil
-//    }
-//    
-//    func RemoveRegisterModel() {
-//        return defaults.removeObject(forKey: "registerModel")
-//    }
-//    
-//    // Function to save an array of objects to UserDefaults
-//     func saveProfileModel(_ profileModel : ProfileModel) {
-//        let encoder = JSONEncoder()
-//        if let encoded = try? encoder.encode(profileModel) {
-//            UserDefaults.standard.set(encoded, forKey: "ProfileModel")
-//        }
-//    }
-//    
-//    // Function to retrieve an array of objects from UserDefaults
-//     func getProfileModel() -> ProfileModel? {
-//        if let savedData = UserDefaults.standard.data(forKey: "ProfileModel") {
-//            let decoder = JSONDecoder()
-//            if let people = try? decoder.decode(ProfileModel.self, from: savedData) {
-//                return people
-//            }
-//        }
-//        return nil
-//    }
-    
     func RemoveProfileModel() {
         return defaults.removeObject(forKey: "ProfileModel")
     }

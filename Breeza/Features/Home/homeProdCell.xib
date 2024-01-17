@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.otf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-SemiBold.otf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="homeProdCell" customModule="Breeza" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="184"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="184"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ef58faa9a71e47e02e217bca7aa11595 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="ass-s7-6zf">
+                        <rect key="frame" x="6" y="0.0" width="159" height="100"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="EO3-S8-imU"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E5-M8-YzS">
+                        <rect key="frame" x="139" y="150" width="18" height="18"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.396078431372549" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="2Xf-9q-zNy"/>
+                            <constraint firstAttribute="width" constant="18" id="FEw-FM-FPP"/>
+                        </constraints>
+                        <color key="tintColor" red="0.96078431369999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
+                        </state>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wN6-H4-kGa">
+                        <rect key="frame" x="16" y="110" width="115" height="58"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Panadol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnb-cK-8mA">
+                                <rect key="frame" x="0.0" y="0.0" width="115" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="lHZ-hU-3Rx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 pcs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b47-fL-KJU">
+                                <rect key="frame" x="0.0" y="34" width="115" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
+                                <color key="textColor" red="0.92941176470588238" green="0.18823529411764706" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 pcs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hja-d8-yhS">
+                                <rect key="frame" x="0.0" y="46" width="115" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="10"/>
+                                <color key="textColor" red="0.92941176469999998" green="0.18823529410000001" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ass-s7-6zf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="05g-5E-91E"/>
+                <constraint firstAttribute="trailing" secondItem="ass-s7-6zf" secondAttribute="trailing" id="3M5-Hz-9VV"/>
+                <constraint firstItem="wN6-H4-kGa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="B2h-jK-R5h"/>
+                <constraint firstItem="ass-s7-6zf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FdY-Iv-2p3"/>
+                <constraint firstItem="0E5-M8-YzS" firstAttribute="leading" secondItem="wN6-H4-kGa" secondAttribute="trailing" constant="8" id="GNa-Pd-AYc"/>
+                <constraint firstItem="wN6-H4-kGa" firstAttribute="top" secondItem="ass-s7-6zf" secondAttribute="bottom" constant="10" id="RhO-K8-SJl"/>
+                <constraint firstAttribute="bottom" secondItem="wN6-H4-kGa" secondAttribute="bottom" constant="16" id="XED-pY-pLA"/>
+                <constraint firstAttribute="trailing" secondItem="0E5-M8-YzS" secondAttribute="trailing" constant="8" id="gDW-Qp-3Zy"/>
+                <constraint firstAttribute="bottom" secondItem="0E5-M8-YzS" secondAttribute="bottom" constant="16" id="l3J-MW-MXB"/>
+            </constraints>
+            <size key="customSize" width="165" height="184"/>
+            <point key="canvasLocation" x="113.74045801526717" y="66.197183098591552"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ef58faa9a71e47e02e217bca7aa11595 (1)" width="57" height="58"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

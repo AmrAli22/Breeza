@@ -21,7 +21,7 @@ class OnboradingLogoVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        view.backgroundColor = .white
+     
         self.logoImage.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.logoImage.alpha = 0.0
         UIView.animate(withDuration: 4.00, animations: { [weak self] in

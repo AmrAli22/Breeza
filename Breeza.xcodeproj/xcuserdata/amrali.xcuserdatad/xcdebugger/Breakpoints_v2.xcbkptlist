@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "54F5DE40-075D-4CA0-98D2-9A28F8D2D992"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "687015CB-C30B-4063-B203-F54D00D1D2E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Breeza/Features/Login/AuthPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "login(username:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "687015CB-C30B-4063-B203-F54D00D1D2E6 - 26a493b8a7a015cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in Breeza.AuthInteractor.login(username: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "687015CB-C30B-4063-B203-F54D00D1D2E6 - 26a493b8a7a015ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in Breeza.AuthInteractor.login(username: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Breeza/Features/Login/AuthPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "Login(user_name:password_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC - 5349298081d8df2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; () in Breeza.AuthPresenter.Login(user_name: Swift.String, password_: Swift.String) -&gt; ()"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC - 5349298081d8df0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; () in Breeza.AuthPresenter.Login(user_name: Swift.String, password_: Swift.String) -&gt; ()"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

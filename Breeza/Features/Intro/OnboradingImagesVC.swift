@@ -1,18 +1,12 @@
-//
-//  OnboradingImagesVC.swift
-//  Breeza
-//
-//  Created by Amr Ali on 11/01/2024.
-//
-
 import UIKit
 
-class OnboradingImagesVC: UIViewController, UIScrollViewDelegate {
-    @IBOutlet weak var  scrollView  : UIScrollView!
-    @IBOutlet weak var  pageControl : UIPageControl!
-    @IBOutlet weak var  nextButton  : UIButton!
+class OnboradingImagesVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    let imageNames = ["OnboradingOne", "OnboradingTwo", "OnboradingThree"] // Replace with your actual image names
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var nextButton: UIButton!
+
+    let imageNames = ["OnboradingOne", "OnboradingTwo", "OnboradingThree"]
     var currentPageIndex = 0
 
     public class func buildVC() -> OnboradingImagesVC {
@@ -20,49 +14,60 @@ class OnboradingImagesVC: UIViewController, UIScrollViewDelegate {
         let view = storyboard.instantiateViewController(withIdentifier: "OnboradingImagesVC") as! OnboradingImagesVC
         return view
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupScrollView()
+        setupCollectionView()
         setupPageControl()
         setupNextButton()
     }
 
-    func setupScrollView() {
-        scrollView.frame = view.bounds
-        scrollView.delegate = self
-        scrollView.isPagingEnabled = true
-        scrollView.contentSize = CGSize(width: view.bounds.width * CGFloat(imageNames.count), height: view.bounds.height)
+    func setupCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
 
-        for (index, imageName) in imageNames.enumerated() {
-            let imageView = UIImageView(frame: CGRect(x: CGFloat(index) * view.bounds.width - 20 , y: 0, width: view.bounds.width - 20 , height: view.bounds.height * 0.8))
-            imageView.image = UIImage(named: imageName)
-            imageView.contentMode = .center
-            scrollView.addSubview(imageView)
-        }
+        collectionView.collectionViewLayout = layout
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
 
-      
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ImageCell")
     }
 
     func setupPageControl() {
         pageControl.numberOfPages = imageNames.count
         pageControl.currentPage = 0
-        pageControl.pageIndicatorTintColor = UIColor.lightGray
-        pageControl.currentPageIndicatorTintColor = UIColor.black
-
-        let pageControlSize = pageControl.size(forNumberOfPages: imageNames.count)
-        let pageControlX = (view.bounds.width - pageControlSize.width) / 2
-        let pageControlY = view.bounds.height - pageControlSize.height - 20
-
-        pageControl.frame = CGRect(x: pageControlX, y: pageControlY, width: pageControlSize.width, height: pageControlSize.height)
-
-        
     }
 
     func setupNextButton() {
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+
+    // MARK: - UICollectionViewDataSource
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageNames.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath)
+
+        let imageView = UIImageView(frame: cell.contentView.bounds)
+        imageView.image = UIImage(named: imageNames[indexPath.item])
+        imageView.contentMode = .scaleAspectFill
+
+        cell.contentView.addSubview(imageView)
+
+        return cell
+    }
+
+    // MARK: - UICollectionViewDelegateFlowLayout
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.bounds.size
     }
 
     // MARK: - Actions
@@ -71,11 +76,10 @@ class OnboradingImagesVC: UIViewController, UIScrollViewDelegate {
         currentPageIndex += 1
 
         if currentPageIndex < imageNames.count {
-            let contentOffsetX = CGFloat(currentPageIndex) * view.bounds.width
-            scrollView.setContentOffset(CGPoint(x: contentOffsetX, y: 0), animated: true)
+            let indexPath = IndexPath(item: currentPageIndex, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             pageControl.currentPage = currentPageIndex
         } else {
-            // Navigate to another view when the last image is reached
             navigateToAnotherView()
         }
     }
@@ -87,7 +91,7 @@ class OnboradingImagesVC: UIViewController, UIScrollViewDelegate {
     // MARK: - UIScrollViewDelegate
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x / view.bounds.width)
+        let pageIndex = round(scrollView.contentOffset.x / collectionView.bounds.width)
         pageControl.currentPage = Int(pageIndex)
         currentPageIndex = Int(pageIndex)
     }

@@ -8,6 +8,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -56,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="29" y="20"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="rBP-de-4FO">
             <objects>
-                <viewController id="vtB-GX-uH7" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" id="vtB-GX-uH7" customClass="LoginVC" customModule="Breeza" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gx0-HC-WN3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,8 +91,8 @@
                                     <constraint firstAttribute="height" constant="1" id="UEW-RT-FAD"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zim-c3-r8h">
-                                <rect key="frame" x="26" y="455.66666666666674" width="331" height="168"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zim-c3-r8h">
+                                <rect key="frame" x="26" y="455.66666666666674" width="331" height="188"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xud-M4-UOA">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="56"/>
@@ -118,7 +119,7 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.5"/>
@@ -145,7 +146,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFc-gy-iex">
-                                        <rect key="frame" x="0.0" y="56" width="331" height="56"/>
+                                        <rect key="frame" x="0.0" y="65.999999999999943" width="331" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iP-of-HiF">
                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="56"/>
@@ -169,7 +170,7 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.56862745098039214" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.5"/>
@@ -177,7 +178,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple.logo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="F28-hY-4hV">
-                                                <rect key="frame" x="20" y="13.333333333333275" width="25" height="28.333333333333339"/>
+                                                <rect key="frame" x="20" y="13.333333333333332" width="25" height="28.333333333333339"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="N5c-b7-MXu"/>
@@ -196,7 +197,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rd2-Ot-aOO">
-                                        <rect key="frame" x="0.0" y="111.99999999999994" width="331" height="56"/>
+                                        <rect key="frame" x="0.0" y="131.99999999999994" width="331" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb1-6c-qv3">
                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="56"/>
@@ -220,7 +221,7 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="value" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.5"/>
@@ -264,6 +265,9 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="vtB-GX-uH7" eventType="touchUpInside" id="SPh-Ko-zSC"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Esm-zu-xKP">
                                 <rect key="frame" x="24" y="124.66666666666669" width="345" height="146"/>
@@ -279,7 +283,7 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eq-VV-icx">
-                                                <rect key="frame" x="64" y="21.999999999999986" width="265" height="21"/>
+                                                <rect key="frame" x="64" y="9.9999999999999858" width="265" height="45"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -288,7 +292,9 @@
                                         <color key="backgroundColor" red="0.8980392157" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="22V-0G-nag"/>
+                                            <constraint firstItem="9eq-VV-icx" firstAttribute="top" secondItem="PZW-zu-nMy" secondAttribute="top" constant="10" id="33l-OP-aDr"/>
                                             <constraint firstItem="J8h-tb-ovN" firstAttribute="centerY" secondItem="HiW-Xm-VwM" secondAttribute="centerY" id="5Oo-f2-g0B"/>
+                                            <constraint firstItem="PZW-zu-nMy" firstAttribute="bottom" secondItem="9eq-VV-icx" secondAttribute="bottom" constant="10" id="5Xv-v6-oio"/>
                                             <constraint firstAttribute="trailing" secondItem="9eq-VV-icx" secondAttribute="trailing" constant="16" id="6LA-uV-Csh"/>
                                             <constraint firstItem="9eq-VV-icx" firstAttribute="centerY" secondItem="HiW-Xm-VwM" secondAttribute="centerY" id="MWA-cc-uLp"/>
                                             <constraint firstItem="9eq-VV-icx" firstAttribute="leading" secondItem="J8h-tb-ovN" secondAttribute="trailing" constant="16" id="TCf-83-uRF"/>
@@ -311,9 +317,9 @@
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLf-nL-nlw">
-                                                <rect key="frame" x="63.999999999999986" y="22" width="157.66666666666663" height="21"/>
+                                                <rect key="frame" x="64" y="10" width="223" height="45"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFd-G5-oqg">
                                                 <rect key="frame" x="297" y="20.666666666666686" width="24" height="24"/>
@@ -323,16 +329,22 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="Eye Slash"/>
+                                                <connections>
+                                                    <action selector="lockPassBtnPressed:" destination="vtB-GX-uH7" eventType="touchUpInside" id="S2M-nZ-1Uk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.89803921568627454" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="FLf-nL-nlw" firstAttribute="centerY" secondItem="J94-CB-WjE" secondAttribute="centerY" id="145-jG-T5b"/>
+                                            <constraint firstItem="FLf-nL-nlw" firstAttribute="top" secondItem="J94-CB-WjE" secondAttribute="top" constant="10" id="1eQ-W4-Q2z"/>
+                                            <constraint firstAttribute="bottom" secondItem="FLf-nL-nlw" secondAttribute="bottom" constant="10" id="5cc-oI-98f"/>
                                             <constraint firstItem="HBs-t5-dLH" firstAttribute="leading" secondItem="J94-CB-WjE" secondAttribute="leading" constant="24" id="huQ-xY-FFY"/>
                                             <constraint firstAttribute="trailing" secondItem="GFd-G5-oqg" secondAttribute="trailing" constant="24" id="lOe-Em-nBf"/>
                                             <constraint firstItem="GFd-G5-oqg" firstAttribute="centerY" secondItem="J94-CB-WjE" secondAttribute="centerY" id="ooK-gl-Vld"/>
                                             <constraint firstAttribute="height" constant="65" id="qBX-Fv-oVn"/>
                                             <constraint firstItem="HBs-t5-dLH" firstAttribute="centerY" secondItem="J94-CB-WjE" secondAttribute="centerY" id="rwq-V0-t4v"/>
+                                            <constraint firstItem="GFd-G5-oqg" firstAttribute="leading" secondItem="FLf-nL-nlw" secondAttribute="trailing" constant="10" id="vZC-qz-7RT"/>
                                             <constraint firstItem="FLf-nL-nlw" firstAttribute="leading" secondItem="HBs-t5-dLH" secondAttribute="trailing" constant="16" id="wmz-4J-psK"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -350,6 +362,10 @@
                                 <state key="normal" title="Forgot Password ?">
                                     <color key="titleColor" red="0.20000000000000001" green="0.396078431372549" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ForgotPassBtnPressed:" destination="vtB-GX-uH7" eventType="touchUpInside" id="UrJ-74-xga"/>
+                                    <segue destination="o9I-Su-gPG" kind="show" id="DhF-fZ-ezW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyH-v5-qX1">
                                 <rect key="frame" x="24" y="280.33333333333331" width="192" height="26"/>
@@ -388,6 +404,14 @@
                             <constraint firstItem="tlN-X5-LKN" firstAttribute="trailing" secondItem="Qy8-Af-15o" secondAttribute="trailing" constant="20" id="ya3-W8-4lw"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sWr-Ud-UZj"/>
+                    <connections>
+                        <outlet property="AlertLabel" destination="hyH-v5-qX1" id="ZIU-Zc-k0e"/>
+                        <outlet property="emailTxtField" destination="9eq-VV-icx" id="7oL-Gd-wcn"/>
+                        <outlet property="lockPassBtn" destination="GFd-G5-oqg" id="S7C-UO-epl"/>
+                        <outlet property="loginBtnConstraint" destination="glB-wT-anp" id="VVn-L1-cvO"/>
+                        <outlet property="passwordTxtField" destination="FLf-nL-nlw" id="dAT-R0-tve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1z-YT-oUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -491,7 +515,7 @@ into medidoc app</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pB-xR-Jzq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="758"/>
+            <point key="canvasLocation" x="2564" y="20"/>
         </scene>
         <!--Onborading ImagesVC-->
         <scene sceneID="Exo-9G-RQH">
@@ -553,54 +577,56 @@ into medidoc app</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agV-LG-QmX">
-                                <rect key="frame" x="20" y="99" width="353" height="540"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25L-JS-SiV">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="540"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="25L-JS-SiV" firstAttribute="top" secondItem="7oY-az-Mr0" secondAttribute="top" id="01w-MU-Pub"/>
-                                    <constraint firstItem="25L-JS-SiV" firstAttribute="leading" secondItem="7oY-az-Mr0" secondAttribute="leading" id="ARC-hQ-98n"/>
-                                    <constraint firstItem="7oY-az-Mr0" firstAttribute="bottom" secondItem="25L-JS-SiV" secondAttribute="bottom" id="Ssi-dK-4Qc"/>
-                                    <constraint firstItem="7oY-az-Mr0" firstAttribute="trailing" secondItem="25L-JS-SiV" secondAttribute="trailing" id="gEi-mf-2xN"/>
-                                    <constraint firstItem="25L-JS-SiV" firstAttribute="centerX" secondItem="agV-LG-QmX" secondAttribute="centerX" id="sAe-TB-u4X"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="4Vz-5c-dN7"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="7oY-az-Mr0"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNy-cv-gQn">
-                                <rect key="frame" x="298" y="42" width="75" height="39"/>
+                                <rect key="frame" x="328.66666666666669" y="59" width="35" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="hJI-p3-HR5"/>
-                                    <constraint firstAttribute="width" constant="75" id="pJv-tv-lLh"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" red="0.63137254901960782" green="0.6588235294117647" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="36x-d6-MbL">
+                                <rect key="frame" x="29.333333333333343" y="118" width="334.33333333333326" height="541"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wmi-LW-8dM">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rzL-Mo-wRe">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yhE-ct-8qP">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="08s-7u-erv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="08s-7u-erv" firstAttribute="trailing" secondItem="agV-LG-QmX" secondAttribute="trailing" constant="20" id="68C-Ha-ShH"/>
+                            <constraint firstItem="36x-d6-MbL" firstAttribute="width" secondItem="fZy-JO-cg3" secondAttribute="width" multiplier="0.85" id="8Y7-kB-C4j"/>
+                            <constraint firstItem="qNy-cv-gQn" firstAttribute="trailing" secondItem="36x-d6-MbL" secondAttribute="trailing" id="DF2-di-IWE"/>
                             <constraint firstAttribute="bottom" secondItem="hqQ-x8-EuX" secondAttribute="bottom" id="MH8-0c-3GW"/>
+                            <constraint firstItem="36x-d6-MbL" firstAttribute="top" secondItem="qNy-cv-gQn" secondAttribute="bottom" constant="20" id="QGO-L4-crm"/>
+                            <constraint firstItem="hqQ-x8-EuX" firstAttribute="top" secondItem="36x-d6-MbL" secondAttribute="bottom" constant="-20" id="Sbu-yx-xMf"/>
+                            <constraint firstItem="qNy-cv-gQn" firstAttribute="top" secondItem="fZy-JO-cg3" secondAttribute="topMargin" id="UBv-N5-bfV"/>
                             <constraint firstItem="hqQ-x8-EuX" firstAttribute="height" secondItem="fZy-JO-cg3" secondAttribute="height" multiplier="0.25" id="V4I-UN-7Yb"/>
-                            <constraint firstItem="agV-LG-QmX" firstAttribute="top" secondItem="08s-7u-erv" secondAttribute="top" constant="40" id="a3w-5r-axJ"/>
-                            <constraint firstItem="agV-LG-QmX" firstAttribute="leading" secondItem="08s-7u-erv" secondAttribute="leading" constant="20" id="dn2-ZQ-bGi"/>
-                            <constraint firstItem="qNy-cv-gQn" firstAttribute="top" secondItem="fZy-JO-cg3" secondAttribute="top" constant="42" id="hu7-Sh-lc4"/>
                             <constraint firstItem="hqQ-x8-EuX" firstAttribute="centerX" secondItem="fZy-JO-cg3" secondAttribute="centerX" id="ody-Qe-Dj6"/>
-                            <constraint firstItem="hqQ-x8-EuX" firstAttribute="top" secondItem="agV-LG-QmX" secondAttribute="bottom" id="tfN-1x-6qi"/>
-                            <constraint firstAttribute="trailing" secondItem="qNy-cv-gQn" secondAttribute="trailing" constant="20" id="wMu-AJ-8Lh"/>
+                            <constraint firstItem="36x-d6-MbL" firstAttribute="centerX" secondItem="fZy-JO-cg3" secondAttribute="centerX" id="peM-C3-FGj"/>
                             <constraint firstItem="hqQ-x8-EuX" firstAttribute="width" secondItem="fZy-JO-cg3" secondAttribute="width" multiplier="0.9" id="xbd-IM-OXg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="36x-d6-MbL" id="BVM-Dj-MJp"/>
                         <outlet property="nextButton" destination="bHP-uS-tZv" id="oDK-1u-2J0"/>
                         <outlet property="pageControl" destination="WLU-oe-rhf" id="JO2-zc-lTY"/>
-                        <outlet property="scrollView" destination="agV-LG-QmX" id="zqo-sR-0bC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0T-wV-55H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -684,17 +710,17 @@ into medidoc app</string>
             <objects>
                 <viewController id="o9I-Su-gPG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bc4-E7-k2j">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Your Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWI-RH-DLR">
-                                <rect key="frame" x="24" y="79" width="345" height="21.666666666666671"/>
+                                <rect key="frame" x="24" y="20" width="345" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-Vc-Y4Z">
-                                <rect key="frame" x="20" y="335" width="353" height="56"/>
+                                <rect key="frame" x="20" y="276" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cZ6-HF-Bj0"/>
@@ -709,9 +735,12 @@ into medidoc app</string>
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="147-w6-gac" kind="show" id="O1L-e3-e3w"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OhI-Kb-z24">
-                                <rect key="frame" x="24" y="230" width="345" height="65"/>
+                                <rect key="frame" x="24" y="171" width="345" height="65"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwg-iP-yMZ">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="65"/>
@@ -739,7 +768,7 @@ into medidoc app</string>
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZqF-nE-YHU">
-                                <rect key="frame" x="24" y="179" width="345" height="32"/>
+                                <rect key="frame" x="24" y="120" width="345" height="32"/>
                                 <segments>
                                     <segment title="Email"/>
                                     <segment title="Phone"/>
@@ -747,7 +776,7 @@ into medidoc app</string>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email or your phone number, we will send you confirmation code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-ie-FIb">
-                                <rect key="frame" x="24" y="120.66666666666667" width="345" height="38.333333333333329"/>
+                                <rect key="frame" x="24" y="61.666666666666657" width="345" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254899999995" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -775,27 +804,28 @@ into medidoc app</string>
                             <constraint firstItem="ZqF-nE-YHU" firstAttribute="centerX" secondItem="Bc4-E7-k2j" secondAttribute="centerX" id="yHw-4y-PtU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8Dd-q9-iSJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N59-Fd-xBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="758"/>
+            <point key="canvasLocation" x="879" y="758"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Pil-RQ-I8x">
             <objects>
                 <viewController id="147-w6-gac" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Uh-Zs-3QV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Verification Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w2-Uh-3pb">
-                                <rect key="frame" x="20" y="79" width="353" height="21.666666666666671"/>
+                                <rect key="frame" x="20" y="20" width="353" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-04-AjD">
-                                <rect key="frame" x="20" y="348" width="353" height="56"/>
+                                <rect key="frame" x="20" y="289" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cvS-O3-NiX"/>
@@ -810,9 +840,12 @@ into medidoc app</string>
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="edl-Qo-7Mi" kind="show" id="RUI-lu-ztB"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-yq-O2a">
-                                <rect key="frame" x="24" y="244" width="345" height="64"/>
+                                <rect key="frame" x="24" y="185" width="345" height="64"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTL-Yg-mvx">
                                         <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="64"/>
@@ -844,7 +877,7 @@ into medidoc app</string>
                                 </constraints>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N0W-gn-zqg">
-                                <rect key="frame" x="20" y="179" width="353" height="46"/>
+                                <rect key="frame" x="20" y="120" width="353" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Ysh-zB-dfd"/>
                                 </constraints>
@@ -855,13 +888,13 @@ into medidoc app</string>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter code that we have sent to your number 08528188*** " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8D-3H-QNR">
-                                <rect key="frame" x="20" y="120.66666666666667" width="353" height="38.333333333333329"/>
+                                <rect key="frame" x="20" y="61.666666666666657" width="353" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254899999995" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrW-zK-PjI">
-                                <rect key="frame" x="82" y="424" width="229" height="30"/>
+                                <rect key="frame" x="82" y="365" width="229" height="30"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Didn’t receive the code? Resend">
@@ -893,27 +926,28 @@ into medidoc app</string>
                             <constraint firstItem="7w2-Uh-3pb" firstAttribute="trailing" secondItem="Y8D-3H-QNR" secondAttribute="trailing" id="yxf-q4-qVn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Fd2-cu-OeT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XW1-B6-vuV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="763"/>
+            <point key="canvasLocation" x="1694" y="758"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ICd-f9-ZWc">
             <objects>
                 <viewController id="edl-Qo-7Mi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oHI-Iy-tq9">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jax-2H-Qw3">
-                                <rect key="frame" x="20" y="79" width="353" height="21.666666666666671"/>
+                                <rect key="frame" x="20" y="20" width="353" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUh-RX-Hrv">
-                                <rect key="frame" x="20" y="326" width="353" height="56"/>
+                                <rect key="frame" x="20" y="267" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="iLZ-dV-qXL"/>
@@ -930,13 +964,13 @@ into medidoc app</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your new password to login " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-9e-k51">
-                                <rect key="frame" x="20" y="120.66666666666667" width="353" height="19.333333333333329"/>
+                                <rect key="frame" x="20" y="61.666666666666664" width="353" height="19.333333333333336"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254899999995" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-if-dZa">
-                                <rect key="frame" x="20" y="160" width="353" height="146"/>
+                                <rect key="frame" x="20" y="101" width="353" height="146"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-9n-vyI">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="65"/>
@@ -947,7 +981,7 @@ into medidoc app</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-Ev-TDl">
-                                                <rect key="frame" x="305" y="20.666666666666657" width="24" height="24"/>
+                                                <rect key="frame" x="305" y="20.666666666666671" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="0n4-XA-bMU"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="O3i-gg-Dpe"/>
@@ -983,7 +1017,7 @@ into medidoc app</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc8-rk-Xcz">
-                                                <rect key="frame" x="305" y="20.666666666666686" width="24" height="24"/>
+                                                <rect key="frame" x="305" y="20.666666666666657" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="pjz-dk-Ban"/>
                                                     <constraint firstAttribute="height" constant="24" id="rSR-Py-oye"/>
@@ -1009,7 +1043,7 @@ into medidoc app</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwY-sd-5uZ">
-                                <rect key="frame" x="20" y="402" width="192" height="26"/>
+                                <rect key="frame" x="20" y="343" width="192" height="26"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="*The password you entered is wrong">
@@ -1037,10 +1071,11 @@ into medidoc app</string>
                             <constraint firstItem="jax-2H-Qw3" firstAttribute="top" secondItem="6pV-0n-gLy" secondAttribute="top" constant="20" id="zKh-ts-Nyx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="v5x-N6-EqA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sn-8n-zoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3393" y="758"/>
+            <point key="canvasLocation" x="2563" y="758"/>
         </scene>
     </scenes>
     <resources>

@@ -31,8 +31,9 @@ class StartVC: UIViewController {
     
     
     @IBAction func LoginPressed(_ sender: Any) {
+        
         DispatchQueue.main.async {
-         //   self.navigationController?.pushViewController(CreateAccVC.buildVC(), animated: true)
+         self.navigationController?.pushViewController(LoginVC.buildVC(), animated: true)
         }
     }
 }
