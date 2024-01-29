@@ -1,0 +1,17 @@
+//
+//  HomeArticleCollectioViewCell.swift
+//  Breeza
+//
+//  Created by Amr Ali on 28/01/2024.
+//
+
+import UIKit
+
+class HomeArticleCollectioViewCell: UICollectionViewCell {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+}

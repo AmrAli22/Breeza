@@ -43,7 +43,7 @@ class AuthPresenter {
             self.authView?.hideSpinner()
             
             if let _ = error {
-                self.authView?.FailureAlert(with: "\(error?.message ?? "WrongUserOrPass".localized())")
+                self.authView?.FailureAlert(with: "Password or username is wrong")
             }else{
                 
                 self.authView?.SuccessLogin()
@@ -75,7 +75,7 @@ struct AuthInteractor {
                     
                     return
                 }else{
-                        let error = ErrorResponse(message: "WrongUserOrPass".localized())
+                        let error = ErrorResponse(message: "Password or username is wrong")
                         completion(error)
                         return
                 }

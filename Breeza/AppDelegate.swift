@@ -36,11 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         refreshAppLanguage()
         setSemantics()
     
-//        if let token = UserDefaultsManager.instance.getRegisterModel()?.result?.token {
-//    
+//        if let token = UserDefaultsManager.instance.getCurrentToken(){
+//            goToHome()
 //        }else{
-//            goToOnboarding()
+//            goToSplash()
 //        }
+      
         goToSplash()
   
     }
@@ -61,6 +62,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
 
+    func goToHome() {
+        let navigationController = UINavigationController(rootViewController: HomeVC.buildVC())
+        navigationController.view.backgroundColor = .white
+        navigationController.navigationBar.isHidden = true
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+
+    }
+    
     
     func goToOnboarding() {
         let navigationController = UINavigationController(rootViewController: OnboradingImagesVC.buildVC())

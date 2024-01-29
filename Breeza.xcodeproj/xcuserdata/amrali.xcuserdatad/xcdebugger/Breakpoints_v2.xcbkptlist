@@ -97,6 +97,21 @@
                   endingLineNumber = "49"
                   offsetFromSymbolStart = "368">
                </Location>
+               <Location
+                  uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC - 5349298081d8df0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; () in Breeza.AuthPresenter.Login(user_name: Swift.String, password_: Swift.String) -&gt; ()"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "364">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

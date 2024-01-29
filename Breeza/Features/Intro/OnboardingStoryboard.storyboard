@@ -825,7 +825,7 @@ into medidoc app</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-04-AjD">
-                                <rect key="frame" x="20" y="289" width="353" height="56"/>
+                                <rect key="frame" x="20" y="244" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cvS-O3-NiX"/>
@@ -845,48 +845,57 @@ into medidoc app</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-yq-O2a">
-                                <rect key="frame" x="24" y="185" width="345" height="64"/>
+                                <rect key="frame" x="24" y="140" width="345" height="64"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTL-Yg-mvx">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTL-Yg-mvx">
                                         <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="64"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-rq-Uit">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-rq-Uit">
                                         <rect key="frame" x="92.333333333333343" y="0.0" width="68.333333333333343" height="64"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Fk-ny-mUT">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Fk-ny-mUT">
                                         <rect key="frame" x="184.66666666666666" y="0.0" width="68" height="64"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-pe-aDb">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-pe-aDb">
                                         <rect key="frame" x="276.66666666666669" y="0.0" width="68.333333333333314" height="64"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="BAF-oy-5ek"/>
                                 </constraints>
                             </stackView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N0W-gn-zqg">
-                                <rect key="frame" x="20" y="120" width="353" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Ysh-zB-dfd"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Email"/>
-                                    <segment title="Phone"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter code that we have sent to your number 08528188*** " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8D-3H-QNR">
                                 <rect key="frame" x="20" y="61.666666666666657" width="353" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
@@ -894,7 +903,7 @@ into medidoc app</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrW-zK-PjI">
-                                <rect key="frame" x="82" y="365" width="229" height="30"/>
+                                <rect key="frame" x="82" y="320" width="229" height="30"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Didn’t receive the code? Resend">
@@ -909,20 +918,16 @@ into medidoc app</string>
                             <constraint firstItem="VrW-zK-PjI" firstAttribute="centerX" secondItem="5Uh-Zs-3QV" secondAttribute="centerX" id="1JQ-Zj-yC1"/>
                             <constraint firstItem="7w2-Uh-3pb" firstAttribute="centerX" secondItem="5Uh-Zs-3QV" secondAttribute="centerX" id="6uR-JE-lTq"/>
                             <constraint firstItem="VrW-zK-PjI" firstAttribute="top" secondItem="Nyn-04-AjD" secondAttribute="bottom" constant="20" id="83s-mc-b7f"/>
-                            <constraint firstItem="fTq-e1-Ca4" firstAttribute="trailing" secondItem="N0W-gn-zqg" secondAttribute="trailing" constant="20" id="9QK-N0-cAD"/>
                             <constraint firstItem="fTq-e1-Ca4" firstAttribute="trailing" secondItem="Nyn-04-AjD" secondAttribute="trailing" constant="20" id="AuJ-Ze-9kE"/>
                             <constraint firstItem="7w2-Uh-3pb" firstAttribute="leading" secondItem="5Uh-Zs-3QV" secondAttribute="leading" constant="20" id="Cqo-YD-KSj"/>
                             <constraint firstAttribute="trailing" secondItem="7w2-Uh-3pb" secondAttribute="trailing" constant="20" id="IWB-CE-PgN"/>
-                            <constraint firstItem="N0W-gn-zqg" firstAttribute="centerX" secondItem="5Uh-Zs-3QV" secondAttribute="centerX" id="KeO-ez-4cS"/>
                             <constraint firstItem="bg9-yq-O2a" firstAttribute="leading" secondItem="fTq-e1-Ca4" secondAttribute="leading" constant="24" id="NuY-8S-I99"/>
                             <constraint firstItem="7w2-Uh-3pb" firstAttribute="top" secondItem="fTq-e1-Ca4" secondAttribute="top" constant="20" id="PTD-C7-uyJ"/>
                             <constraint firstItem="fTq-e1-Ca4" firstAttribute="trailing" secondItem="bg9-yq-O2a" secondAttribute="trailing" constant="24" id="gfO-fb-66p"/>
                             <constraint firstItem="7w2-Uh-3pb" firstAttribute="leading" secondItem="Y8D-3H-QNR" secondAttribute="leading" id="i01-vy-e5U"/>
                             <constraint firstItem="Nyn-04-AjD" firstAttribute="top" secondItem="bg9-yq-O2a" secondAttribute="bottom" constant="40" id="iIq-bH-efd"/>
-                            <constraint firstItem="N0W-gn-zqg" firstAttribute="top" secondItem="Y8D-3H-QNR" secondAttribute="bottom" constant="20" id="j29-Dm-FQ5"/>
-                            <constraint firstItem="N0W-gn-zqg" firstAttribute="leading" secondItem="fTq-e1-Ca4" secondAttribute="leading" constant="20" id="rjC-Ws-p8u"/>
+                            <constraint firstItem="bg9-yq-O2a" firstAttribute="top" secondItem="Y8D-3H-QNR" secondAttribute="bottom" constant="40" id="qHv-vm-9Zr"/>
                             <constraint firstItem="Nyn-04-AjD" firstAttribute="leading" secondItem="fTq-e1-Ca4" secondAttribute="leading" constant="20" id="sJD-Ak-iIB"/>
-                            <constraint firstItem="bg9-yq-O2a" firstAttribute="top" secondItem="N0W-gn-zqg" secondAttribute="bottom" constant="20" id="sMr-gQ-AwY"/>
                             <constraint firstItem="7w2-Uh-3pb" firstAttribute="trailing" secondItem="Y8D-3H-QNR" secondAttribute="trailing" id="yxf-q4-qVn"/>
                         </constraints>
                     </view>
@@ -980,7 +985,7 @@ into medidoc app</string>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-Ev-TDl">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-Ev-TDl">
                                                 <rect key="frame" x="305" y="20.666666666666671" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="0n4-XA-bMU"/>
@@ -1012,9 +1017,9 @@ into medidoc app</string>
                                         <rect key="frame" x="0.0" y="81" width="353" height="65"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjA-8l-CgR">
-                                                <rect key="frame" x="16" y="22" width="157.66666666666666" height="21"/>
+                                                <rect key="frame" x="16" y="22.666666666666657" width="157.66666666666666" height="20"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc8-rk-Xcz">
                                                 <rect key="frame" x="305" y="20.666666666666657" width="24" height="24"/>
@@ -1042,7 +1047,7 @@ into medidoc app</string>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwY-sd-5uZ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwY-sd-5uZ">
                                 <rect key="frame" x="20" y="343" width="192" height="26"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

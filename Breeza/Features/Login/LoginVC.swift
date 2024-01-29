@@ -140,7 +140,7 @@ extension LoginVC : AuthView {
     
     func SuccessLogin() {
         hideLoader()
-        
+        AppDelegate.instance?.goToHome()
     }
     
     func FailureAlert(with error: String) {
