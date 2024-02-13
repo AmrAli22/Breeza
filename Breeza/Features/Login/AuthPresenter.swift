@@ -45,7 +45,6 @@ class AuthPresenter {
             if let _ = error {
                 self.authView?.FailureAlert(with: "Password or username is wrong")
             }else{
-                
                 self.authView?.SuccessLogin()
                 return
             }

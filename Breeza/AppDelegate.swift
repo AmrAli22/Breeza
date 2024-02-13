@@ -36,13 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         refreshAppLanguage()
         setSemantics()
     
-//        if let token = UserDefaultsManager.instance.getCurrentToken(){
-//            goToHome()
-//        }else{
-//            goToSplash()
-//        }
+        if let token = UserDefaultsManager.instance.getCurrentToken(){
+            
+            goToHome()
+        }else{
+            goToSplash()
+        }
       
-        goToSplash()
+      
   
     }
     
@@ -53,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func goToSplash() {
-        let navigationController = UINavigationController(rootViewController: OnboradingLogoVC.buildVC())
+        let navigationController = UINavigationController(rootViewController: MainTabBarVC.buildVC())
         navigationController.view.backgroundColor = .white
         navigationController.navigationBar.isHidden = true
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -63,13 +64,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func goToHome() {
-        let navigationController = UINavigationController(rootViewController: HomeVC.buildVC())
-        navigationController.view.backgroundColor = .white
-        navigationController.navigationBar.isHidden = true
+
+        let navigationController = UINavigationController(rootViewController: MainTabBarVC.buildVC())
+        navigationController.navigationBar.isHidden = false
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-
+        
+    
     }
     
     

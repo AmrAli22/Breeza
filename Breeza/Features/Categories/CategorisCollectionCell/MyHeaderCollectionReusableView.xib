@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.otf">
+            <string>Inter-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyHeaderCollectionReusableView" reuseIdentifier="MyHeaderCollectionReusableView" id="U6b-Vx-4bR" customClass="MyHeaderCollectionReusableView" customModule="Breeza" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="124"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-Qd-dKo">
+                    <rect key="frame" x="0.0" y="0.0" width="377" height="124"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browse by category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-ww-iEu">
+                            <rect key="frame" x="0.0" y="51.333333333333336" width="377" height="21.666666666666664"/>
+                            <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4cG-ww-iEu" secondAttribute="trailing" id="PSW-aZ-3yX"/>
+                        <constraint firstItem="4cG-ww-iEu" firstAttribute="centerY" secondItem="kgN-Qd-dKo" secondAttribute="centerY" id="c9Y-fM-foG"/>
+                        <constraint firstItem="4cG-ww-iEu" firstAttribute="centerX" secondItem="kgN-Qd-dKo" secondAttribute="centerX" id="iA6-eX-LKC"/>
+                        <constraint firstItem="4cG-ww-iEu" firstAttribute="leading" secondItem="kgN-Qd-dKo" secondAttribute="leading" id="vHu-rz-I2V"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kgN-Qd-dKo" secondAttribute="trailing" id="2es-aL-FMr"/>
+                <constraint firstItem="kgN-Qd-dKo" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="DiQ-co-1TS"/>
+                <constraint firstItem="kgN-Qd-dKo" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="QJ8-Fo-sez"/>
+                <constraint firstAttribute="bottom" secondItem="kgN-Qd-dKo" secondAttribute="bottom" id="wBD-mY-9ko"/>
+            </constraints>
+            <connections>
+                <outlet property="headerText" destination="4cG-ww-iEu" id="geB-Xk-jYP"/>
+            </connections>
+            <point key="canvasLocation" x="67.938931297709928" y="-14.788732394366198"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

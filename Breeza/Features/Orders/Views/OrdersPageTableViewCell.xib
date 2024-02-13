@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Medium.otf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-SemiBold.otf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="OrdersPageTableViewCell" customModule="Breeza" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="345" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="#3765" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy2-Xs-mMc">
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="fD6-GM-IJz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chris company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vq-RB-g6C">
+                        <rect key="frame" x="0.0" y="25" width="345" height="14"/>
+                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
+                        <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received : Sunday,10 Dec - $145.50 - 43 Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w9-qP-L6M">
+                        <rect key="frame" x="0.0" y="44" width="211.33333333333334" height="12"/>
+                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="10"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlr-Av-euZ">
+                        <rect key="frame" x="315" y="31" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="TC4-k1-F4Y"/>
+                            <constraint firstAttribute="width" constant="24" id="aoQ-qb-fa2"/>
+                        </constraints>
+                        <color key="tintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e0B-il-4dO">
+                        <rect key="frame" x="0.0" y="61.999999999999993" width="15" height="13.666666666666664"/>
+                        <color key="tintColor" red="0.59215688710000003" green="0.90980386729999996" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="fGs-gg-qHG"/>
+                            <constraint firstAttribute="height" constant="15" id="qbC-UM-zMm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-c8-edY">
+                        <rect key="frame" x="14.999999999999996" y="56" width="49.666666666666657" height="25"/>
+                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="10"/>
+                        <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4Vq-RB-g6C" firstAttribute="top" secondItem="sy2-Xs-mMc" secondAttribute="bottom" constant="5" id="ETI-eo-SnN"/>
+                    <constraint firstItem="7w9-qP-L6M" firstAttribute="top" secondItem="4Vq-RB-g6C" secondAttribute="bottom" constant="5" id="EVY-n5-fKb"/>
+                    <constraint firstAttribute="trailing" secondItem="Tlr-Av-euZ" secondAttribute="trailing" constant="6" id="FfG-8a-gqS"/>
+                    <constraint firstItem="4Vq-RB-g6C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KcQ-tN-Fbj"/>
+                    <constraint firstItem="Fdf-c8-edY" firstAttribute="leading" secondItem="e0B-il-4dO" secondAttribute="trailing" id="QK7-bH-FGV"/>
+                    <constraint firstItem="Fdf-c8-edY" firstAttribute="centerY" secondItem="e0B-il-4dO" secondAttribute="centerY" id="VzH-ml-ZYv"/>
+                    <constraint firstAttribute="trailing" secondItem="sy2-Xs-mMc" secondAttribute="trailing" id="YU1-3a-K41"/>
+                    <constraint firstItem="e0B-il-4dO" firstAttribute="top" secondItem="7w9-qP-L6M" secondAttribute="bottom" constant="5" id="fKN-bs-rzA"/>
+                    <constraint firstItem="Tlr-Av-euZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hh7-hK-eQq"/>
+                    <constraint firstItem="4Vq-RB-g6C" firstAttribute="top" secondItem="sy2-Xs-mMc" secondAttribute="bottom" constant="5" id="iQj-Y7-t2d"/>
+                    <constraint firstAttribute="trailing" secondItem="4Vq-RB-g6C" secondAttribute="trailing" id="l4K-V0-38v"/>
+                    <constraint firstItem="e0B-il-4dO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lL8-2m-8WC"/>
+                    <constraint firstItem="sy2-Xs-mMc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pbB-4U-kWG"/>
+                    <constraint firstItem="sy2-Xs-mMc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yDP-0A-xyD"/>
+                    <constraint firstItem="Fdf-c8-edY" firstAttribute="top" secondItem="7w9-qP-L6M" secondAttribute="bottom" id="ylD-qZ-Xrc"/>
+                    <constraint firstItem="7w9-qP-L6M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zXJ-f4-P6t"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="companyName" destination="4Vq-RB-g6C" id="LZ6-3S-MXd"/>
+                <outlet property="orderNumber" destination="sy2-Xs-mMc" id="qxp-W5-8lm"/>
+                <outlet property="recivedStatues" destination="7w9-qP-L6M" id="Dse-YA-gbh"/>
+                <outlet property="stauesName" destination="Fdf-c8-edY" id="PvV-Dr-H3k"/>
+            </connections>
+            <point key="canvasLocation" x="31.297709923664122" y="-21.83098591549296"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

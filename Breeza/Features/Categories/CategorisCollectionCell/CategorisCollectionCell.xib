@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.otf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategorisCollectionCell" id="gTV-IL-0wX" customClass="CategorisCollectionCell" customModule="Breeza" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="129"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="91" height="129"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdF-ir-fum">
+                        <rect key="frame" x="0.0" y="0.0" width="91" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fi-rs-building" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-Zr-6rP">
+                                <rect key="frame" x="10" y="10" width="71" height="76"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Re6-Zr-6rP" firstAttribute="top" secondItem="KdF-ir-fum" secondAttribute="top" constant="10" id="4RR-xs-Ofh"/>
+                            <constraint firstAttribute="trailing" secondItem="Re6-Zr-6rP" secondAttribute="trailing" constant="10" id="OY1-yz-NZo"/>
+                            <constraint firstItem="Re6-Zr-6rP" firstAttribute="leading" secondItem="KdF-ir-fum" secondAttribute="leading" constant="10" id="f7l-ka-eRG"/>
+                            <constraint firstAttribute="bottom" secondItem="Re6-Zr-6rP" secondAttribute="bottom" constant="10" id="ji6-cE-e6B"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHZ-5U-sTW">
+                        <rect key="frame" x="5" y="106" width="81" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="yKM-XI-Tg5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                        <color key="textColor" red="0.63137254901960782" green="0.6588235294117647" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="0.99607843159999998" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mHZ-5U-sTW" secondAttribute="bottom" constant="5" id="ROB-xm-Mjb"/>
+                <constraint firstItem="KdF-ir-fum" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WdU-OI-T6V"/>
+                <constraint firstItem="KdF-ir-fum" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cfd-E7-mQs"/>
+                <constraint firstItem="mHZ-5U-sTW" firstAttribute="top" secondItem="KdF-ir-fum" secondAttribute="bottom" constant="10" id="fZR-HZ-lq2"/>
+                <constraint firstAttribute="trailing" secondItem="KdF-ir-fum" secondAttribute="trailing" id="rWB-8B-UFE"/>
+                <constraint firstItem="mHZ-5U-sTW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xBn-D1-sHj"/>
+                <constraint firstAttribute="trailing" secondItem="mHZ-5U-sTW" secondAttribute="trailing" constant="5" id="xge-B9-Oc8"/>
+            </constraints>
+            <size key="customSize" width="91" height="129"/>
+            <connections>
+                <outlet property="Cellimage" destination="Re6-Zr-6rP" id="fpe-bx-Z0l"/>
+                <outlet property="cellText" destination="mHZ-5U-sTW" id="WQ0-EJ-M4w"/>
+            </connections>
+            <point key="canvasLocation" x="54.198473282442748" y="46.83098591549296"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="fi-rs-building" width="24" height="24"/>
+    </resources>
+</document>

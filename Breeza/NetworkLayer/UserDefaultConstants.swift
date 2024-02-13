@@ -21,9 +21,10 @@ public struct APIUrlsConstants {
     //MARK: - BASE API_MAIN_URL
     public static let APIMainURL     = "http://123-env.eba-r2jth8tp.us-east-1.elasticbeanstalk.com"
     public static let login          = "/api/v1/authentication/sign-in"
+    public static let homeProducts   = "/api/v1/product/filtered"
     
     
-
+    
 
     
 }

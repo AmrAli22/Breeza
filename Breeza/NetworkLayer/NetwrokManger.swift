@@ -25,10 +25,18 @@ class NetworkingManager {
         
         let WantedLang = UserDefaultsManager.instance.getCurrentLanguage()?.contains("ar") ?? true ? "ar" : "en"
         
-        recievedHeaders?.add(name: "accept", value: "text/plain")
-        recievedHeaders?.add(name: "Authorization", value: "Bearer " + token)
-        recievedHeaders?.add(name: "Accept-Language", value: "\(WantedLang)")
         recievedHeaders?.add(name: "Content-Type", value: "application/json")
+        recievedHeaders?.add(name: "Authorization", value: "Bearer " + token)
+        recievedHeaders?.add(name: "Accept", value: "*/*")
+        recievedHeaders?.add(name: "Cookie", value: "DCSToken=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6OSwibmFtZSI6InRoZWFtcmFsaSIsInN1YiI6IjkiLCJpYXQiOjE3MDU1MTkwODEsImV4cCI6MTcwNTUyNjI4MX0.Pa4FA8IEHU1ThEGpJl5DN20xC1YayFGiNH8Pys2lAXbk68ZOmguHbbsUzmvENNodayz2cL9gGe157uoRg308pw")
+        
+//        let Basicheaders: HTTPHeaders = [
+//            "Content-Type": "application/json",
+//            "Accept": "*/*",
+//            "Cookie": "DCSToken=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6OSwibmFtZSI6InRoZWFtcmFsaSIsInN1YiI6IjkiLCJpYXQiOjE3MDU1MTkwODEsImV4cCI6MTcwNTUyNjI4MX0.Pa4FA8IEHU1ThEGpJl5DN20xC1YayFGiNH8Pys2lAXbk68ZOmguHbbsUzmvENNodayz2cL9gGe157uoRg308pw"
+//        ]
+//        
+        
         
         var ComputedUrl = APIUrlsConstants.APIMainURL + url
         

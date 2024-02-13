@@ -14,8 +14,8 @@
             filePath = "Breeza/Features/Login/AuthPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "login(username:password:completion:)"
             landmarkType = "7">
             <Locations>
@@ -55,64 +55,145 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC"
+            uuid = "A1ED18AA-D453-4B75-8022-1FE20B3C65E6"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Breeza/Features/Login/AuthPresenter.swift"
+            filePath = "Breeza/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "Login(user_name:password_:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "startApplication()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC - 5349298081d8df2b"
+                  uuid = "A1ED18AA-D453-4B75-8022-1FE20B3C65E6 - f05ace626450d3b5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; () in Breeza.AuthPresenter.Login(user_name: Swift.String, password_: Swift.String) -&gt; ()"
+                  symbolName = "Breeza.AppDelegate.startApplication() -&gt; ()"
                   moduleName = "Breeza"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "368">
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "356">
                </Location>
                <Location
-                  uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC - 5349298081d8df0a"
+                  uuid = "A1ED18AA-D453-4B75-8022-1FE20B3C65E6 - f05ace626450d3d6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; () in Breeza.AuthPresenter.Login(user_name: Swift.String, password_: Swift.String) -&gt; ()"
+                  symbolName = "Breeza.AppDelegate.startApplication() -&gt; ()"
                   moduleName = "Breeza"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/AppDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "368">
-               </Location>
-               <Location
-                  uuid = "505F2D85-A626-4486-BEE1-1DE53F2971EC - 5349298081d8df0a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Breeza.ErrorResponse&gt;) -&gt; () in Breeza.AuthPresenter.Login(user_name: Swift.String, password_: Swift.String) -&gt; ()"
-                  moduleName = "Breeza"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Login/AuthPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "364">
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "356">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA01A892-5D85-4C6E-8467-F19DFD4A7B72"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Breeza/NetworkLayer/NetwrokManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "sendRequestAuth(method:url:headers:params:Appendedparams:encoding:successHandler:errorHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "217DB69A-7A82-480A-853C-E070C32F7C87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Breeza/Features/Categories/Views/CategorisVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "217DB69A-7A82-480A-853C-E070C32F7C87 - db3b15d1c8f1d6b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Breeza.CategorisVC.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Categories/Views/CategorisVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "217DB69A-7A82-480A-853C-E070C32F7C87 - db3b15d1c8f1d6d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Breeza.CategorisVC.collectionView(_: __C.UICollectionView, layout: __C.UICollectionViewLayout, sizeForItemAt: Foundation.IndexPath) -&gt; __C.CGSize"
+                  moduleName = "Breeza"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrali/Desktop/Breeza/Breeza/Features/Categories/Views/CategorisVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13FD0AAB-6CA0-4DA8-B48B-E1AA73630B24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Breeza/Features/Categories/Views/CategorisVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B0CE514-408B-4AD4-96FA-BAE1E200A802"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Breeza/Features/Categories/Views/CategorisVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "collectionView(_:viewForSupplementaryElementOfKind:at:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
