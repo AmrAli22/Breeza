@@ -23,46 +23,64 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdF-ir-fum">
-                        <rect key="frame" x="0.0" y="0.0" width="91" height="96"/>
+                        <rect key="frame" x="5" y="5" width="81" height="119"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fi-rs-building" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-Zr-6rP">
-                                <rect key="frame" x="10" y="10" width="71" height="76"/>
+                                <rect key="frame" x="0.0" y="0.0" width="81" height="79"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lung Speciliests" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHZ-5U-sTW">
+                                <rect key="frame" x="0.0" y="79" width="81" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LHv-kJ-cQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                <color key="textColor" red="0.63137254901960782" green="0.6588235294117647" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Re6-Zr-6rP" firstAttribute="top" secondItem="KdF-ir-fum" secondAttribute="top" constant="10" id="4RR-xs-Ofh"/>
-                            <constraint firstAttribute="trailing" secondItem="Re6-Zr-6rP" secondAttribute="trailing" constant="10" id="OY1-yz-NZo"/>
-                            <constraint firstItem="Re6-Zr-6rP" firstAttribute="leading" secondItem="KdF-ir-fum" secondAttribute="leading" constant="10" id="f7l-ka-eRG"/>
-                            <constraint firstAttribute="bottom" secondItem="Re6-Zr-6rP" secondAttribute="bottom" constant="10" id="ji6-cE-e6B"/>
+                            <constraint firstItem="Re6-Zr-6rP" firstAttribute="leading" secondItem="KdF-ir-fum" secondAttribute="leading" id="EMl-Oz-cYB"/>
+                            <constraint firstItem="Re6-Zr-6rP" firstAttribute="top" secondItem="KdF-ir-fum" secondAttribute="top" id="J7l-Lv-jef"/>
+                            <constraint firstAttribute="trailing" secondItem="mHZ-5U-sTW" secondAttribute="trailing" id="KfH-Yq-nf3"/>
+                            <constraint firstAttribute="trailing" secondItem="Re6-Zr-6rP" secondAttribute="trailing" id="R4P-Vm-zto"/>
+                            <constraint firstItem="mHZ-5U-sTW" firstAttribute="leading" secondItem="KdF-ir-fum" secondAttribute="leading" id="ohw-mV-lvk"/>
+                            <constraint firstItem="mHZ-5U-sTW" firstAttribute="top" secondItem="Re6-Zr-6rP" secondAttribute="bottom" id="qiy-tq-fPx"/>
+                            <constraint firstAttribute="bottom" secondItem="mHZ-5U-sTW" secondAttribute="bottom" id="tsh-KZ-PaH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="16"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="10" y="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHZ-5U-sTW">
-                        <rect key="frame" x="5" y="106" width="81" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="yKM-XI-Tg5"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
-                        <color key="textColor" red="0.63137254901960782" green="0.6588235294117647" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.99607843159999998" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="mHZ-5U-sTW" secondAttribute="bottom" constant="5" id="ROB-xm-Mjb"/>
-                <constraint firstItem="KdF-ir-fum" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WdU-OI-T6V"/>
-                <constraint firstItem="KdF-ir-fum" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cfd-E7-mQs"/>
-                <constraint firstItem="mHZ-5U-sTW" firstAttribute="top" secondItem="KdF-ir-fum" secondAttribute="bottom" constant="10" id="fZR-HZ-lq2"/>
-                <constraint firstAttribute="trailing" secondItem="KdF-ir-fum" secondAttribute="trailing" id="rWB-8B-UFE"/>
-                <constraint firstItem="mHZ-5U-sTW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="xBn-D1-sHj"/>
-                <constraint firstAttribute="trailing" secondItem="mHZ-5U-sTW" secondAttribute="trailing" constant="5" id="xge-B9-Oc8"/>
+                <constraint firstItem="KdF-ir-fum" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="DO1-HK-s6P"/>
+                <constraint firstAttribute="bottom" secondItem="KdF-ir-fum" secondAttribute="bottom" constant="5" id="ea1-bl-A6b"/>
+                <constraint firstAttribute="trailing" secondItem="KdF-ir-fum" secondAttribute="trailing" constant="5" id="fsT-7B-tuk"/>
+                <constraint firstItem="KdF-ir-fum" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="iEX-NS-iab"/>
             </constraints>
             <size key="customSize" width="91" height="129"/>
             <connections>

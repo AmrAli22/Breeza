@@ -62,10 +62,19 @@ class UserDefaultsManager {
         return defaults.string(forKey: UserDefaultsConstants.Noti)
     }
     
-    
     func RemoveProfileModel() {
         return defaults.removeObject(forKey: "ProfileModel")
     }
+    
+    
+    func getRefreshToken() -> String? {
+        return defaults.string(forKey: UserDefaultsConstants.refreshToken)
+    }
+    
+    func saveRefreshToken(refreshToken : String) {
+        defaults.setValue(refreshToken, forKey: UserDefaultsConstants.refreshToken)
+    }
+    
     
    
 }

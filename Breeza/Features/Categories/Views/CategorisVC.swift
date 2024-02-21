@@ -7,20 +7,28 @@
 
 import UIKit
 
-class CategorisVC: UIViewController, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CategorisVC: BaseVC, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
+ 
+    var presenter                : CategorisPresenter!
     
-    let catogiresData = ["General", "Lungs Specialist", "Dentist", "Psychiatrist" , "Covid-19" , "Surgeon" , "Cardiologist" , "Show all"]
-    
-    let suppliersData = ["Michael LLC" , "Christopher" , "Willy" , "Jack" , "Christopher" , "Willy" , "Jack" , "Show all"]
-
     public class func buildVC() -> CategorisVC {
         let storyboard = UIStoryboard(name: "CategoriesStoryboard", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "CategorisVC") as! CategorisVC
+        let pres = CategorisPresenter(categorisView: view)
+            view.presenter = pres
         return view
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.presenter.categorisView = self
+        self.presenter.getSuppliers()
+        self.presenter.getCatogris()
+        self.presenter.getBrands()
+       
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,27 +38,27 @@ class CategorisVC: UIViewController, UITableViewDelegate, UICollectionViewDelega
  
         let CategorisCollectionCellnib = UINib(nibName: "CategorisCollectionCell", bundle: nil)
         collectionView.register(CategorisCollectionCellnib, forCellWithReuseIdentifier: "CategorisCollectionCell" )
-        
-//        collectionView.register(MyHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "MyHeaderCollectionReusableView")
         collectionView.register(MyHeaderCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerReuseIdentifier")
 
-
+  
         
     }
     
     // MARK: - TableView DataSource and Delegate
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 3
     }
     
     // MARK: - CollectionView DataSource and Delegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return catogiresData.count
+            return self.presenter.categorisItems.count
+        }else if section == 1{
+            return self.presenter.suppliersItems.count
         }else{
-            return suppliersData.count
+            return self.presenter.brandsItems.count
         }
     }
     
@@ -64,8 +72,10 @@ class CategorisVC: UIViewController, UITableViewDelegate, UICollectionViewDelega
 
                 if indexPath.section == 0 {
                     headerXView.titleLabel.text = "Browse by category"
-                }else{
+                }else if indexPath.section == 1{
                     headerXView.titleLabel.text = "Browse by Supplier"
+                }else{
+                    headerXView.titleLabel.text = "Browse by Brands"
                 }
 
                 return headerXView
@@ -87,10 +97,13 @@ class CategorisVC: UIViewController, UITableViewDelegate, UICollectionViewDelega
         
         if indexPath.section == 0 {
             cell.Cellimage.image = UIImage(named: "Doctor")
-            cell.cellText.text = catogiresData[indexPath.row]
+            cell.cellText.text   = self.presenter.categorisItems[indexPath.row].name
+        }else if indexPath.section == 1 {
+            cell.Cellimage.image = UIImage(named: "fi-rs-building")
+            cell.cellText.text   = self.presenter.suppliersItems[indexPath.row].name
         }else{
             cell.Cellimage.image = UIImage(named: "fi-rs-building")
-            cell.cellText.text = suppliersData[indexPath.row]
+            cell.cellText.text   = self.presenter.brandsItems[indexPath.row].name
         }
         return cell
     }
@@ -106,13 +119,15 @@ class CategorisVC: UIViewController, UITableViewDelegate, UICollectionViewDelega
 
         // Add some padding to the cell size
         let sizeWidth = (collectionView.bounds.width / 4 )
+        print("CollectionWidth = \(collectionView.bounds.width )")
+        print("CellWidth = \((collectionView.bounds.width / 4 ) )")
         
-        return CGSize(width: sizeWidth  , height: 100)
+        return CGSize(width: sizeWidth  , height: 120)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-           return 0.0 // You can adjust this value
+           return 0 // You can adjust this value
        }
 
        // Set the spacing between sections
@@ -147,4 +162,41 @@ class MyHeaderCollectionView: UICollectionReusableView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension CategorisVC : CategorisView {
+    func showSpinner() {
+        showLoader()
+    }
+    
+    func hideSpinner() {
+        hideLoader()
+    }
+
+    func FailureAlert(with error: String) {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Error".localized(), withMessage: error)
+        }
+    }
+    
+    func SuccessAlert(with msg: String) {
+        
+        DispatchQueue.main.async {
+            self.showAlert(title: "Success".localized(), withMessage: "")
+        }
+    }
+    
+    func SuccessGetCatogris() {
+        self.collectionView.reloadData()
+    }
+    
+    func SuccessGetBrands() {
+        self.collectionView.reloadData()
+    }
+    
+    func SuccessGetSuppliers() {
+        self.collectionView.reloadData()
+    }
+    
+    
 }

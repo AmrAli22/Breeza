@@ -64,14 +64,16 @@ struct AuthInteractor {
         let params =  ["username"             :"\(username)",
                        "password"             :"\(password)"   ] as [String: Any]
    
-        NetworkingManager.sendReq(method: .post , url: APIUrlsConstants.login , params: params ) { data in
+        NetworkingManager.sendReq(method: .post , url: APIUrlsConstants.login , params: params , encoding: JSONEncoding.default ) { data in
             do {
                 let dataResponse: TokenModel = try JSONDecoder().decode(TokenModel.self, from: data!)
                 
                 if let token = dataResponse.token {
-                    UserDefaultsManager.instance.saveCurrentToken(Token: token)
-                    completion(nil)
-                    
+                    if let refreshToken = dataResponse.refreshToken {
+                        UserDefaultsManager.instance.saveCurrentToken(Token: token)
+                        UserDefaultsManager.instance.saveRefreshToken(refreshToken: refreshToken)
+                        completion(nil)
+                    }
                     return
                 }else{
                         let error = ErrorResponse(message: "Password or username is wrong")
@@ -92,4 +94,8 @@ struct AuthInteractor {
 
 struct TokenModel: Codable {
     var token: String?
+    var refreshToken : String?
+    var mustChangePassword : Bool?
+    var title : String?
+    var fullName : String?
 }

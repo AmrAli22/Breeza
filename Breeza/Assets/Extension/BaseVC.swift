@@ -35,7 +35,17 @@ class BaseVC: UIViewController {
         }else{
             AppLanguage.shared.set(index: .english)
         }
+     
         
+    }
+    
+    
+    func setupBackButtonS() {
+       
+
+        self.navigationController?.navigationBar.topItem?.title = " "
+        self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = .clear
+        self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .clear
         
     }
     

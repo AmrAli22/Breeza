@@ -39,7 +39,7 @@
                                         <state key="normal" image="plus" catalog="system"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ePG-no-PZL" firstAttribute="leading" secondItem="2hE-x5-ZDz" secondAttribute="leading" constant="24" id="38x-pr-4Q2"/>
                                     <constraint firstAttribute="bottom" secondItem="ePG-no-PZL" secondAttribute="bottom" constant="10" id="3DE-Jf-98U"/>
@@ -60,16 +60,19 @@
                             </button>
                             <searchBar contentMode="redraw" placeholder="Supplier, order number" translatesAutoresizingMaskIntoConstraints="NO" id="Hbd-nJ-Xt5">
                                 <rect key="frame" x="63" y="104" width="306" height="56"/>
+                                <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="9HR-9Z-xiW"/>
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fbF-pb-sah">
-                                <rect key="frame" x="24" y="170" width="345" height="30"/>
+                                <rect key="frame" x="24" y="170" width="345" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wgL-nN-wBG"/>
+                                    <constraint firstAttribute="height" constant="45" id="wgL-nN-wBG"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hUa-4u-Ufv">
                                     <size key="itemSize" width="128" height="128"/>
@@ -79,7 +82,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ovE-ZY-SpC">
-                                        <rect key="frame" x="0.0" y="-49" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="-41.666666666666664" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Z2D-cK-eWs">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -88,13 +91,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qda-3b-sTv">
-                                <rect key="frame" x="24" y="210" width="345" height="559"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qda-3b-sTv">
+                                <rect key="frame" x="24" y="225" width="345" height="544"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qda-3b-sTv" firstAttribute="top" secondItem="fbF-pb-sah" secondAttribute="bottom" constant="10" id="16H-ye-HMf"/>
                             <constraint firstItem="fbF-pb-sah" firstAttribute="top" secondItem="Hbd-nJ-Xt5" secondAttribute="bottom" constant="10" id="9sI-ga-O1b"/>

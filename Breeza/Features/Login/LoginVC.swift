@@ -89,14 +89,14 @@ class LoginVC: BaseVC{
      }
 
     
-    func setupBackButtonS() {
-        let color = UIColor(hex: "#3D5AA8")
-
-        self.navigationController?.navigationBar.topItem?.title = " "
-        self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = color
-        self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = color
-        self.navigationController?.navigationBar.tintColor = color;
-    }
+//    override func setupBackButtonS() {
+//        let color = UIColor(hex: "#3D5AA8")
+//
+//        self.navigationController?.navigationBar.topItem?.title = " "
+//        self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = color
+//        self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = color
+//        self.navigationController?.navigationBar.tintColor = color;
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

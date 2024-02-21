@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddToOrderVC: UIViewController {
+class AddToOrderVC: BaseVC {
     
     @IBOutlet weak var AlertLabel: UILabel!
     @IBOutlet weak var numOfPicesTxtField: UITextField!

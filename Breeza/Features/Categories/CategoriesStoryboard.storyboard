@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -38,7 +37,7 @@
                                         <state key="normal" image="plus" catalog="system"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Hiu-82-KCc" secondAttribute="trailing" constant="24" id="8dt-0Z-Rfy"/>
                                     <constraint firstItem="0RH-l1-MpK" firstAttribute="leading" secondItem="sDV-sD-qpN" secondAttribute="leading" constant="24" id="GOk-8d-xQ0"/>
@@ -49,13 +48,14 @@
                             </view>
                             <searchBar contentMode="redraw" placeholder="Search by category" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-yQ-ben">
                                 <rect key="frame" x="24" y="104" width="345" height="56"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="F9Z-Ww-Q39" id="fhO-9U-095"/>
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JvP-4H-MMh">
-                                <rect key="frame" x="24" y="180" width="345" height="569"/>
+                                <rect key="frame" x="24" y="160" width="345" height="589"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zV3-dK-ZoQ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -67,13 +67,13 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3r0-gC-dBd"/>
-                        <color key="backgroundColor" red="0.98823529480000005" green="0.98823529480000005" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3r0-gC-dBd" firstAttribute="trailing" secondItem="sDV-sD-qpN" secondAttribute="trailing" id="1db-5R-y1k"/>
                             <constraint firstItem="sDV-sD-qpN" firstAttribute="top" secondItem="Nn0-Mp-GQu" secondAttribute="top" id="36b-1E-Q6H"/>
                             <constraint firstItem="3r0-gC-dBd" firstAttribute="bottom" secondItem="JvP-4H-MMh" secondAttribute="bottom" constant="20" id="Muh-hs-5YA"/>
                             <constraint firstItem="fCB-yQ-ben" firstAttribute="top" secondItem="sDV-sD-qpN" secondAttribute="bottom" constant="4" id="NOA-pk-Yvw"/>
-                            <constraint firstItem="JvP-4H-MMh" firstAttribute="top" secondItem="fCB-yQ-ben" secondAttribute="bottom" constant="20" id="TDO-mQ-eZD"/>
+                            <constraint firstItem="JvP-4H-MMh" firstAttribute="top" secondItem="fCB-yQ-ben" secondAttribute="bottom" id="TDO-mQ-eZD"/>
                             <constraint firstItem="JvP-4H-MMh" firstAttribute="leading" secondItem="fCB-yQ-ben" secondAttribute="leading" id="TY4-4V-MFz"/>
                             <constraint firstItem="JvP-4H-MMh" firstAttribute="trailing" secondItem="fCB-yQ-ben" secondAttribute="trailing" id="ie2-cj-oHm"/>
                             <constraint firstItem="sDV-sD-qpN" firstAttribute="leading" secondItem="Nn0-Mp-GQu" secondAttribute="leading" id="nNx-Xw-0Hn"/>
@@ -117,9 +117,12 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="nsZ-wt-Acr" eventType="touchUpInside" id="xbE-rm-QOD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="LQf-LH-Fl5" firstAttribute="top" secondItem="XJc-2i-9k5" secondAttribute="top" constant="65" id="MKT-TD-fjd"/>
                                     <constraint firstAttribute="height" constant="100" id="gAj-oS-vrx"/>
@@ -130,13 +133,14 @@
                             </view>
                             <searchBar contentMode="redraw" placeholder="Search product,SKU.." translatesAutoresizingMaskIntoConstraints="NO" id="7q5-G9-YPs">
                                 <rect key="frame" x="24" y="104" width="345" height="56"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="nsZ-wt-Acr" id="9qA-aR-Ref"/>
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Guy-Nw-ngz">
-                                <rect key="frame" x="24" y="180" width="345" height="569"/>
+                                <rect key="frame" x="24" y="160" width="345" height="589"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BoP-ew-0EC">
                                     <size key="itemSize" width="128" height="128"/>
@@ -148,12 +152,12 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xGn-bt-uvA"/>
-                        <color key="backgroundColor" red="0.98823529480000005" green="0.98823529480000005" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7q5-G9-YPs" firstAttribute="leading" secondItem="xGn-bt-uvA" secondAttribute="leading" constant="24" id="B8Z-DJ-hpR"/>
                             <constraint firstItem="7q5-G9-YPs" firstAttribute="top" secondItem="XJc-2i-9k5" secondAttribute="bottom" constant="4" id="DYb-jq-weD"/>
                             <constraint firstItem="LQf-LH-Fl5" firstAttribute="leading" secondItem="7q5-G9-YPs" secondAttribute="leading" id="IDr-zC-pzP"/>
-                            <constraint firstItem="Guy-Nw-ngz" firstAttribute="top" secondItem="7q5-G9-YPs" secondAttribute="bottom" constant="20" id="Lua-Wu-d3q"/>
+                            <constraint firstItem="Guy-Nw-ngz" firstAttribute="top" secondItem="7q5-G9-YPs" secondAttribute="bottom" id="Lua-Wu-d3q"/>
                             <constraint firstItem="7q5-G9-YPs" firstAttribute="centerX" secondItem="XJc-2i-9k5" secondAttribute="centerX" id="TUk-9G-Evt"/>
                             <constraint firstItem="xGn-bt-uvA" firstAttribute="trailing" secondItem="XJc-2i-9k5" secondAttribute="trailing" id="aur-Wm-tSO"/>
                             <constraint firstItem="Guy-Nw-ngz" firstAttribute="leading" secondItem="7q5-G9-YPs" secondAttribute="leading" id="ead-NF-cxn"/>
@@ -178,8 +182,5 @@
         <image name="CategoriesBlue" width="24" height="24"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

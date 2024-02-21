@@ -10,14 +10,22 @@ import UIKit
 class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     @IBOutlet weak var sectionName: UILabel!
     
-    var isLowestStockItems = false {
-        didSet {
-            self.sectionName.text = isLowestStockItems ? "Lowest stock Items" : "Expired soon"
+    var Items = [HomeProductContent]() {
+        didSet{
+            self.collectionView.reloadData()
         }
     }
     
-    var isArticle = false
-    
+    var cellType = 0 {
+        didSet {
+            if cellType == 0 {
+                self.sectionName.text = "Lowest stock Items"
+            }else if cellType == 1 {
+                self.sectionName.text = "Expired soon"
+            }
+        }
+    }
+
     var didPressSeeAllAction     : (() -> Void)?
     
     @IBOutlet weak var collectionView: UICollectionView! {
@@ -44,46 +52,39 @@ class HomeTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         }        
     }
     
-    
      override func awakeFromNib() {
          super.awakeFromNib()
-         
-         self.sectionName.text = isLowestStockItems ? "Lowest stock Items" : "Expired soon"
-         if isArticle {
-             self.sectionName.text = "Health article"
-         }
      }
 
-     // UICollectionViewDataSource methods
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return 11
+         return Items.count
      }
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeProdCell", for: indexPath) as! homeProdCell
-         let articleCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArticleCollectionViewCell", for: indexPath) as! ArticleCollectionViewCell
+
+         var currentItem = Items[indexPath.row]
          
-         if isArticle {
-             return articleCell
+         if cellType == 0 {
+             cell.isLowestStock = true
+             cell.numOfPicesForLowestStock.text = "\(currentItem.quantity ?? 0 )" + " " + "PCS"
          }else{
-             cell.isLowestStock = self.isLowestStockItems
-             cell.updateUi()
-             return cell
+             cell.isLowestStock = false
+             cell.numOfPicesForExpiredSoon.text = "\(currentItem.quantity ?? 0 )" + " " + "PCS"
          }
-        
+
+         cell.prodName.text = currentItem.productName
+         cell.ProdCost.text = "\(currentItem.purchasePrice ?? 0)" + " " + "$"
+      
+         
+         cell.updateUi()
+         return cell
+         
      }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
    
-        if isArticle  {
-            
-              let cellWidth = collectionView.bounds.width
-              return CGSize(width: cellWidth, height: 100)
-        }else{
-    
-              return CGSize(width: 140, height: 210)
-        }
-        
+        return CGSize(width: 140, height: 210)
+
       }
-    
  }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class OrdersVC: BaseVC, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
         @IBOutlet weak var tableView: UITableView!
         @IBOutlet weak var collectionView: UICollectionView!
@@ -39,7 +39,8 @@ class OrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             let nibHomeTableViewCell = UINib(nibName: "OrdersPageTableViewCell", bundle: nil)
             tableView.register(nibHomeTableViewCell, forCellReuseIdentifier: "OrdersPageTableViewCell")
 
-            
+            tableView.showsVerticalScrollIndicator = false
+            tableView.showsHorizontalScrollIndicator = false
             let HomeArticleCollectioViewCellnib = UINib(nibName: "ordersTypeHomeCollectionCell", bundle: nil)
             collectionView.register(HomeArticleCollectioViewCellnib, forCellWithReuseIdentifier: "ordersTypeHomeCollectionCell" )
         }
@@ -53,7 +54,7 @@ class OrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let  OrdersPageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "OrdersPageTableViewCell" , for: indexPath) as! OrdersPageTableViewCell
-            
+            OrdersPageTableViewCell.selectionStyle = .none
             return OrdersPageTableViewCell
         }
 
@@ -64,22 +65,21 @@ class OrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            
-            
-            
+
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ordersTypeHomeCollectionCell", for: indexPath) as! ordersTypeHomeCollectionCell
        
             cell.clipsToBounds = true
             cell.TabName.text = collectionData[indexPath.item]
+            
       
             let blueColor = UIColor(hex: "#3365A6")
 
             // Change color if the cell is selected
             if selectedCollectionIndex == indexPath {
-                cell.TabName.backgroundColor   = blueColor
+                cell.textView.backgroundColor   = blueColor
                 cell.TabName.textColor         = UIColor.white
             } else {
-                cell.TabName.backgroundColor   = UIColor(hex: "#FBFBFB")
+                cell.textView.backgroundColor   = UIColor(hex: "#FBFBFB")
                 cell.TabName.textColor         = UIColor.black
             }
 
@@ -106,6 +106,6 @@ class OrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             label.sizeToFit()
 
             // Add some padding to the cell size
-            return CGSize(width: label.frame.width + 40, height: 30)
+            return CGSize(width: label.frame.width + 40, height: 40)
         }
     }

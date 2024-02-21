@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.otf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.otf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HomeSectionHeaderView" id="FgM-eK-SAS" customClass="HomeSectionHeaderView" customModule="Breeza" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="99"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvp-ea-46L">
+                    <rect key="frame" x="0.0" y="0.0" width="509" height="99"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="baC-Q2-uCK">
+                            <rect key="frame" x="24" y="34.666666666666664" width="461" height="29.999999999999993"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFz-aR-Xpk">
+                                    <rect key="frame" x="0.0" y="5.3333333333333357" width="391" height="19.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-VB-zrE">
+                                    <rect key="frame" x="401" y="0.0" width="60" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="UWz-0O-YRQ"/>
+                                        <constraint firstAttribute="width" constant="60" id="eJf-Lx-LaQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
+                                    <color key="tintColor" systemColor="tintColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="see all">
+                                        <color key="titleColor" name="AccentColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="seeAllBtnPressed:" destination="FgM-eK-SAS" eventType="touchUpInside" id="wvs-Jy-dq8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="IeA-dM-rLC"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="baC-Q2-uCK" firstAttribute="centerY" secondItem="dvp-ea-46L" secondAttribute="centerY" id="MDz-RR-QtV"/>
+                        <constraint firstAttribute="trailing" secondItem="baC-Q2-uCK" secondAttribute="trailing" constant="24" id="cVe-9n-6qf"/>
+                        <constraint firstItem="baC-Q2-uCK" firstAttribute="centerX" secondItem="dvp-ea-46L" secondAttribute="centerX" id="pcC-sn-hr1"/>
+                        <constraint firstItem="baC-Q2-uCK" firstAttribute="leading" secondItem="dvp-ea-46L" secondAttribute="leading" constant="24" id="q2Q-WR-eyX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="13"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="O3P-Nh-l6M"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="AuctionDetailsHeaderView"/>
+            <constraints>
+                <constraint firstItem="dvp-ea-46L" firstAttribute="top" secondItem="FgM-eK-SAS" secondAttribute="top" id="FDF-bR-ynm"/>
+                <constraint firstItem="dvp-ea-46L" firstAttribute="trailing" secondItem="O3P-Nh-l6M" secondAttribute="trailing" id="Hka-ZZ-OJq"/>
+                <constraint firstAttribute="bottom" secondItem="dvp-ea-46L" secondAttribute="bottom" id="I5E-H3-O52"/>
+                <constraint firstItem="dvp-ea-46L" firstAttribute="leading" secondItem="O3P-Nh-l6M" secondAttribute="leading" id="kqN-az-JHS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerTitle" destination="NFz-aR-Xpk" id="iu5-VF-5vd"/>
+                <outlet property="seeAllBtn" destination="oWf-VB-zrE" id="zTE-y2-hle"/>
+            </connections>
+            <point key="canvasLocation" x="111" y="-651"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

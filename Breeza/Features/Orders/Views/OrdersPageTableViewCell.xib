@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received : Sunday,10 Dec - $145.50 - 43 Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7w9-qP-L6M">
-                        <rect key="frame" x="0.0" y="44" width="211.33333333333334" height="12"/>
+                        <rect key="frame" x="0.0" y="44" width="223" height="12"/>
                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="10"/>
                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -65,12 +65,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-c8-edY">
-                        <rect key="frame" x="14.999999999999996" y="56" width="49.666666666666657" height="25"/>
+                        <rect key="frame" x="14.999999999999996" y="56" width="52.666666666666657" height="25"/>
                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="10"/>
                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="4Vq-RB-g6C" firstAttribute="top" secondItem="sy2-Xs-mMc" secondAttribute="bottom" constant="5" id="ETI-eo-SnN"/>
                     <constraint firstItem="7w9-qP-L6M" firstAttribute="top" secondItem="4Vq-RB-g6C" secondAttribute="bottom" constant="5" id="EVY-n5-fKb"/>

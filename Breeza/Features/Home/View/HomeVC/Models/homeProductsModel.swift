@@ -1,41 +1,36 @@
+// This file was generated from JSON Schema using quicktype, do not modify it directly.
+// To parse the JSON, add this file to your project and do:
 //
-//  homeProductsModel.swift
-//  Breeza
-//
-//  Created by Amr Ali on 08/02/2024.
-//
+//   let homeProductModel = try? JSONDecoder().decode(HomeProductModel.self, from: jsonData)
 
 import Foundation
-//   let homeProductModel = try? JSONDecoder().decode(HomeProductModel.self, from: jsonData)
+
 // MARK: - HomeProductModel
 struct HomeProductModel: Codable {
-    var content: [ProductContent]?
-    var pageable: Pageable?
     var totalPages, totalElements: Int?
-    var last: Bool?
-    var size, number: Int?
+    var pageable: Pageable?
+    var size: Int?
+    var content: [HomeProductContent]?
+    var number: Int?
     var sort: Sort?
     var numberOfElements: Int?
-    var first, empty: Bool?
+    var first, last, empty: Bool?
 }
 
 // MARK: - Content
-struct ProductContent: Codable {
+struct HomeProductContent: Codable {
     var id: Int?
     var productName: String?
-    var category: Brand?
-    var brand: Brand?
+    var category, brand: Brand?
     var supplier: Supplier?
     var maximumCapacity, quantity, safetyStock, expiryQuantity: Int?
-    var imageURL: String?
-    var description: String?
-    var barcode: String?
+    var imageURL, description, barcode: String?
     var productUomID, usageUomID, orderUomID: Int?
     var uomUsageName, uomOrderName: String?
     var uomConversionQuantity: Int?
     var sameUOM: Bool?
     var purchasePrice, minOrderQty: Int?
-    var expiryUnit: ExpiryUnit?
+    var expiryUnit: String?
 
     enum CodingKeys: String, CodingKey {
         case id, productName, category, brand, supplier, maximumCapacity, quantity, safetyStock, expiryQuantity
@@ -54,22 +49,16 @@ struct Brand: Codable {
     var name: String?
 }
 
-enum ExpiryUnit: String, Codable {
-    case month = "Month"
-    case year = "Year"
-}
-
 // MARK: - Supplier
 struct Supplier: Codable {
     var id: Int?
-    var name: String?
-    var contactNumber: String?
+    var name, contactNumber: String?
 }
 
 // MARK: - Pageable
 struct Pageable: Codable {
-    var sort: Sort?
     var pageNumber, pageSize, offset: Int?
+    var sort: Sort?
     var paged, unpaged: Bool?
 }
 

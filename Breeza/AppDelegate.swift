@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             goToHome()
         }else{
+            
             goToSplash()
         }
       
@@ -54,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func goToSplash() {
-        let navigationController = UINavigationController(rootViewController: MainTabBarVC.buildVC())
+        let navigationController = UINavigationController(rootViewController: OnboradingLogoVC.buildVC())
         navigationController.view.backgroundColor = .white
         navigationController.navigationBar.isHidden = true
         window = UIWindow(frame: UIScreen.main.bounds)

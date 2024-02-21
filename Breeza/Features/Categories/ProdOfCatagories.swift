@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProdOfCatagories: UIViewController, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -29,6 +29,18 @@ class ProdOfCatagories: UIViewController, UITableViewDelegate, UICollectionViewD
         
         let ProdOfCatogriesCollectionsCellCellnib = UINib(nibName: "ProdOfCatogriesCollectionsCell", bundle: nil)
         collectionView.register(ProdOfCatogriesCollectionsCellCellnib, forCellWithReuseIdentifier: "ProdOfCatogriesCollectionsCell" )
+        
+        
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationBar.topItem?.title = " "
+        self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = .clear
+        self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .clear
+        
+    }
+    
+    
+    @IBAction func backBtn(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - CollectionView DataSource and Delegate

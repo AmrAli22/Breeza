@@ -45,7 +45,11 @@ class OnboradingImagesVC: UIViewController, UICollectionViewDelegate, UICollecti
     func setupNextButton() {
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
-
+    
+    @IBAction func skipBtnPressed(_ sender: Any) {
+        self.navigationController?.pushViewController(StartVC.buildVC(), animated: true)
+    }
+    
     // MARK: - UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

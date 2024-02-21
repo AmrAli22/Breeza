@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectOrderVC: UIViewController {
+class SelectOrderVC: BaseVC {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,7 +26,10 @@ class SelectOrderVC: UIViewController {
             tableView.dataSource = self
             tableView.delegate   = self
             
-            self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.isNavigationBarHidden = true
+            self.navigationController?.navigationBar.topItem?.title = " "
+            self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = .clear
+            self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .clear
 
             let nibHomeTableViewCell = UINib(nibName: "OrderTableViewCell", bundle: nil)
             tableView.register(nibHomeTableViewCell, forCellReuseIdentifier: "OrderTableViewCell")

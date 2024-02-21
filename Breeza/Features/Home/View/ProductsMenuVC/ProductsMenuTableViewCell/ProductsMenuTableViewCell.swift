@@ -10,6 +10,9 @@ import UIKit
 class ProductsMenuTableViewCell: UITableViewCell {
 
     var didPressAddToCartAction     : (() -> Void)?
+    @IBOutlet weak var prodName: UILabel!
+    @IBOutlet weak var prodPcs: UILabel!
+    @IBOutlet weak var prodCost: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

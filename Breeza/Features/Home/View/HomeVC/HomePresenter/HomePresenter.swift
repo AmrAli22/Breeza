@@ -25,9 +25,14 @@ class homePresenter {
     //MARK: - homeInteractor
     let homeInteractor = HomeInteractor()
     
-    var lowestStockItems = [ProductContent]()
-    var expiredSoonItems = [ProductContent]()
+    var lowestStockItems = [HomeProductContent]()
+    var expiredSoonItems = [HomeProductContent]()
     
+    var currentlowestStockPage: Int = 0
+    var totallowestStockPages: Int = 1
+    
+    var currentexpiredSoonPage: Int = 0
+    var totalexpiredSoonPages: Int = 1
     
     //MARK: - PresenterConstractours
     init(homeView: homeView ) {
@@ -38,7 +43,7 @@ class homePresenter {
     func getLowestStockHomeProducts(){
         self.homeView?.showSpinner()
         
-        homeInteractor.GetHomeProducts(homeProudctsType: 0) { [weak self ] (LowestStockItems, error) in
+        homeInteractor.GetHomeProducts(homeProudctsType: 0, currentPage : currentlowestStockPage ) { [weak self ] (LowestStockItems, error) in
 
             guard let self = self else { return }
             self.homeView?.hideSpinner()
@@ -48,7 +53,11 @@ class homePresenter {
                 return
             }
             
-            self.lowestStockItems = LowestStockItems?.content ?? [ProductContent]()
+            self.lowestStockItems.append(contentsOf: LowestStockItems?.content ?? [HomeProductContent]())
+            
+            self.currentlowestStockPage  = (LowestStockItems?.pageable?.pageNumber ?? 0) + 1
+            self.totallowestStockPages   =  LowestStockItems?.totalPages ?? 1
+            
             self.homeView?.SuccessLowestStockHome()
             return
         }
@@ -58,7 +67,7 @@ class homePresenter {
     func getexpiredSoonHomeProducts(){
         self.homeView?.showSpinner()
         
-        homeInteractor.GetHomeProducts(homeProudctsType: 1) { [weak self ] (expiredSoonItems, error) in
+        homeInteractor.GetHomeProducts(homeProudctsType: 1, currentPage: currentexpiredSoonPage) { [weak self ] (expiredSoonItems, error) in
 
             guard let self = self else { return }
             self.homeView?.hideSpinner()
@@ -67,7 +76,10 @@ class homePresenter {
                 self.homeView?.FailureAlert(with: "\(error?.message ?? "please_check_your_internet_connection_and_try_again".localized())")
                 return
             }
-            self.expiredSoonItems = expiredSoonItems?.content ?? [ProductContent]()
+            self.expiredSoonItems.append(contentsOf: expiredSoonItems?.content ?? [HomeProductContent]())
+           // = expiredSoonItems?.content ?? [HomeProductContent]()
+            self.currentexpiredSoonPage = (expiredSoonItems?.pageable?.pageNumber ?? 0) + 1
+            self.totalexpiredSoonPages  = expiredSoonItems?.totalPages ?? 1
             self.homeView?.SuccessExpiredSoon()
             return
         }
