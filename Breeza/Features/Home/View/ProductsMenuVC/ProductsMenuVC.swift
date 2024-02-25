@@ -87,10 +87,16 @@ extension ProductsMenuVC : UITableViewDelegate ,UITableViewDataSource {
             self.navigationController?.pushViewController(AddToOrderVC.buildVC() , animated: true)
         }
         
-        if indexPath.row == presenter.lowestStockItems.count - 1 && !isLoading {
+        
+        if isLowestItem {
+            if indexPath.row == presenter.lowestStockItems.count - 1 && !isLoading {
+                self.presenter.getLowestStockHomeProducts() }
+        }else{
             
-               loadMoreData()
-           }
+            if indexPath.row == presenter.expiredSoonItems.count - 1 && !isLoading { self.presenter.getexpiredSoonHomeProducts() }
+        }
+        
+        
         
         return cell
     }

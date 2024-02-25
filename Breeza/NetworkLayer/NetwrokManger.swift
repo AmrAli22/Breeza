@@ -61,9 +61,13 @@ class NetworkingManager {
                 if response.response?.statusCode == 401 {
                     // If the status code is 401, attempt to refresh the token
                     
+                    
+                    
+                  //  newrefresh(refreshToken: UserDefaultsManager.instance.getRefreshToken() ?? "")
+                    
                     if refreshTokenAttempts < maxRefreshTokenAttempts {
                         refreshTokenAttempts += 1
-                        refreshToken { success in
+                        newrefresh { success in
                             if success == true{
                                 // Retry the original request after token refresh
                                 self.sendRequestAuth(method: method, url: url, headers: headers, params: params, Appendedparams: Appendedparams, encoding: encoding, successHandler: successHandler, errorHandler: errorHandler)
@@ -78,7 +82,7 @@ class NetworkingManager {
                         print("Max refresh token attempts reached.")
                         errorHandler(nil) // or pass an appropriate error
                     }
-                    
+//                    
                     
                 } else {
                     
@@ -108,8 +112,52 @@ class NetworkingManager {
         return urlComponents?.url?.absoluteString ?? ""
     }
     
-    
     typealias refreshTokenComplation = (_ done: Bool?) -> ()
+   static func newrefresh(completion: @escaping refreshTokenComplation) {
+       let refreshToken =  UserDefaultsManager.instance.getRefreshToken() ?? ""
+       let parameters = "{\n  \"refreshToken\": \"\(refreshToken)\"\n}"
+       let postData = parameters.data(using: .utf8)
+
+       var request = URLRequest(url: URL(string: "http://123-env.eba-r2jth8tp.us-east-1.elasticbeanstalk.com/api/v1/authentication/refresh-token")!,timeoutInterval: Double.infinity)
+       request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+       request.addValue("*/*", forHTTPHeaderField: "Accept")
+
+       request.httpMethod = "POST"
+       request.httpBody = postData
+
+       let task = URLSession.shared.dataTask(with: request) { data, response, error in
+         guard let data = data else {
+             completion(false)
+             return
+         }
+           
+           do {
+               
+               let dataResponse: TokenModel = try JSONDecoder().decode(TokenModel.self, from: data)
+               
+               if let token = dataResponse.token {
+                   if let refreshToken = dataResponse.refreshToken {
+                       UserDefaultsManager.instance.saveCurrentToken(Token: token)
+                       UserDefaultsManager.instance.saveRefreshToken(refreshToken: refreshToken)
+                       
+                       completion(true)
+                       return
+                   }
+               }
+               completion(false)
+               return
+           } catch (let error) {
+               let errorResponse = ErrorResponse(message: error.localizedDescription)
+               completion(false)
+               return
+           }
+       }
+       
+       task.resume()
+
+    }
+    
+    ///typealias refreshTokenComplation = (_ done: Bool?) -> ()
     static func refreshToken(completion: @escaping refreshTokenComplation){
         
         let params: [String: Any] = [
@@ -151,7 +199,7 @@ class NetworkingManager {
         
         let Basicheaders: HTTPHeaders = [
             "Content-Type": "application/json",
-            "Accept": "*/*",
+            "accept": "*/*",
             "Cookie": "DCSToken=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6OSwibmFtZSI6InRoZWFtcmFsaSIsInN1YiI6IjkiLCJpYXQiOjE3MDU1MTkwODEsImV4cCI6MTcwNTUyNjI4MX0.Pa4FA8IEHU1ThEGpJl5DN20xC1YayFGiNH8Pys2lAXbk68ZOmguHbbsUzmvENNodayz2cL9gGe157uoRg308pw"
         ]
         
@@ -159,6 +207,7 @@ class NetworkingManager {
         
         AF.request(ComputedUrl , method: method,parameters: params ?? [:], encoding: encoding, headers: Basicheaders)
             .responseJSON(completionHandler: {  response in
+     
                 
             switch response.result {
             case .success(let data):

@@ -53,8 +53,8 @@
                             <constraint firstAttribute="width" constant="24" id="aoQ-qb-fa2"/>
                         </constraints>
                         <color key="tintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="chevron.right" catalog="system"/>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e0B-il-4dO">
                         <rect key="frame" x="0.0" y="61.999999999999993" width="15" height="13.666666666666664"/>
@@ -71,7 +71,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="4Vq-RB-g6C" firstAttribute="top" secondItem="sy2-Xs-mMc" secondAttribute="bottom" constant="5" id="ETI-eo-SnN"/>
                     <constraint firstItem="7w9-qP-L6M" firstAttribute="top" secondItem="4Vq-RB-g6C" secondAttribute="bottom" constant="5" id="EVY-n5-fKb"/>

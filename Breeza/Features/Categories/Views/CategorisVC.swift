@@ -24,8 +24,9 @@ class CategorisVC: BaseVC, UITableViewDelegate, UICollectionViewDelegate, UIColl
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.presenter.categorisView = self
+        self.presenter.resetData()
         self.presenter.getSuppliers()
-        self.presenter.getCatogris()
+        self.presenter.getCatogrs()
         self.presenter.getBrands()
        
     }
@@ -110,7 +111,15 @@ class CategorisVC: BaseVC, UITableViewDelegate, UICollectionViewDelegate, UIColl
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(ProdOfCatagories.buildVC(), animated: true)
+        
+        if indexPath.section == 0 {
+            self.presenter.selectedCat = self.presenter.categorisItems[indexPath.row].id
+        }else if indexPath.section == 1 {
+            self.presenter.selectedSupplier = self.presenter.suppliersItems[indexPath.row].id
+        }else{
+            self.presenter.selectedBrand = self.presenter.brandsItems[indexPath.row].id
+        }
+        self.navigationController?.pushViewController(ProdOfCatagories.buildVC(pres: self.presenter), animated: true)
     }
     
     // MARK: - CollectionViewFlowLayout Delegate
@@ -165,6 +174,10 @@ class MyHeaderCollectionView: UICollectionReusableView {
 }
 
 extension CategorisVC : CategorisView {
+    func SuccessGetItems() {
+        
+    }
+    
     func showSpinner() {
         showLoader()
     }

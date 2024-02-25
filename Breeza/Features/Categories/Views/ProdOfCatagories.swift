@@ -11,12 +11,15 @@ class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, U
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let prodData = ["General", "Lungs Specialist", "Dentist", "Psychiatrist" , "Covid-19" , "Surgeon" , "Cardiologist" , "Show all"]
+    var isLoading: Bool = false
 
+    var presenter                : CategorisPresenter!
 
-    public class func buildVC() -> ProdOfCatagories {
+    public class func buildVC(pres : CategorisPresenter) -> ProdOfCatagories {
         let storyboard = UIStoryboard(name: "CategoriesStoryboard", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "ProdOfCatagories") as! ProdOfCatagories
+        pres.categorisView = view
+        view.presenter = pres
         return view
     }
     
@@ -35,6 +38,12 @@ class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, U
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = .clear
         self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .clear
+        self.presenter.FilterProducts()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
     
@@ -46,13 +55,32 @@ class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, U
     // MARK: - CollectionView DataSource and Delegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return prodData.count
+        return self.presenter.currentItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProdOfCatogriesCollectionsCell", for: indexPath) as! ProdOfCatogriesCollectionsCell
+
+        let currentItem = presenter.currentItems[indexPath.row]
+        
+        cell.prodName.text = currentItem.productName
+        cell.prodCost.text =  "$" + " " + "\(currentItem.purchasePrice ?? 0)"
+        cell.companyname.text = currentItem.brand?.name
+        cell.stockNumberOfpices.text = "Stock - \(currentItem.quantity ?? 0) pcs"
+        
+        
+        if indexPath.row == presenter.currentItems.count - 1  && !isLoading {
+               loadMoreData()
+           }
+        
         return cell
+    }
+    
+    func loadMoreData() {
+        guard !isLoading else { return }
+        isLoading = true
+        self.presenter.FilterProducts()
     }
     
 
@@ -66,4 +94,46 @@ class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, U
         return CGSize(width: sizeWidth  , height: 200)
     }
 
+}
+
+extension ProdOfCatagories : CategorisView {
+    func SuccessGetItems() {
+        self.collectionView.reloadData()
+    }
+    
+    
+    func showSpinner() {
+        showLoader()
+    }
+    
+    func hideSpinner() {
+        hideLoader()
+    }
+
+    func FailureAlert(with error: String) {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Error".localized(), withMessage: error)
+        }
+    }
+    
+    func SuccessAlert(with msg: String) {
+        
+        DispatchQueue.main.async {
+            self.showAlert(title: "Success".localized(), withMessage: "")
+        }
+    }
+    
+    func SuccessGetCatogris() {
+        self.collectionView.reloadData()
+    }
+    
+    func SuccessGetBrands() {
+        self.collectionView.reloadData()
+    }
+    
+    func SuccessGetSuppliers() {
+        self.collectionView.reloadData()
+    }
+    
+    
 }

@@ -70,6 +70,7 @@ struct AuthInteractor {
                 
                 if let token = dataResponse.token {
                     if let refreshToken = dataResponse.refreshToken {
+                        
                         UserDefaultsManager.instance.saveCurrentToken(Token: token)
                         UserDefaultsManager.instance.saveRefreshToken(refreshToken: refreshToken)
                         completion(nil)

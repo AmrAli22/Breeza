@@ -31,7 +31,19 @@ public struct APIUrlsConstants {
     
     
     
-    
+    /*
+     
+     "brandIds": [
+        0
+      ],
+      "categoryIds": [
+        0
+      ],
+      "supplier": [
+        0
+      ],
+     
+     */
     
     
 

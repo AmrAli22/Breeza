@@ -81,6 +81,49 @@ struct CategorisInteractor {
     }
 
     
+    typealias FiltredItemsComplation = (_ Items: HomeProductModel?, _ error: ErrorResponse?) -> ()
+    func GetFiltredProducts(selectedCatg : Int? , selectedBrand : Int? , selectedSupplier : Int? ,currentPage : Int ,completion: @escaping FiltredItemsComplation) {
+        
+        var  params: [String: Any] = [
+            "sortByLowestStock": false,
+            "sortByExpirySoon" : true,
+            "underMinimum": false
+        ]
+        
+        if  selectedCatg != nil  {
+            params.updateValue([selectedCatg!], forKey: "categoryIds")
+        }
+        
+        if  selectedBrand  != nil {
+            params.updateValue([selectedBrand!], forKey: "brandIds")
+        }
+        
+        if  selectedSupplier != nil {
+            params.updateValue([selectedSupplier!], forKey: "supplier")
+        }
+        
+        let pageinig : [String: Any] = [
+            "page" : currentPage ,
+            "size" : 10
+        ]
+
+        NetworkingManager.sendRequestAuth(method: .post, url: APIUrlsConstants.homeProducts , params: params , Appendedparams: pageinig ,encoding: JSONEncoding.default) { data in
+            do {
+                
+                let dataResponse: HomeProductModel = try JSONDecoder().decode(HomeProductModel.self, from: data!)
+                completion(dataResponse, nil)
+          
+            } catch (let error) {
+                let errorResponse = ErrorResponse(message: error.localizedDescription)
+                completion(nil, errorResponse)
+                return
+            }
+        } errorHandler: { error in
+            completion(nil, error)
+            return
+        }
+    }
+    
     
     
 }

@@ -600,7 +600,6 @@
 				656342F52B858EF300AFBB95 /* Models */,
 				656342F02B858D7400AFBB95 /* Presenter */,
 				656342EF2B858D5F00AFBB95 /* Interactor */,
-				65A022992B7C038200E555B7 /* ProdOfCatagories.swift */,
 				650BAD452B7C002900071AAA /* ProdOfCatogriesCollectionsCell */,
 				65953AEB2B79541300C80BB1 /* CategorisCollectionCell */,
 				65953AE92B79520700C80BB1 /* CategoriesStoryboard.storyboard */,
@@ -613,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				65953AF12B795A7C00C80BB1 /* CategorisVC.swift */,
+				65A022992B7C038200E555B7 /* ProdOfCatagories.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -991,7 +991,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MCZ5YTBX7R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Breeza/Info.plist;
@@ -1025,7 +1025,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MCZ5YTBX7R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Breeza/Info.plist;
