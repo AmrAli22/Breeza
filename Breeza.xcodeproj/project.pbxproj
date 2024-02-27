@@ -104,6 +104,12 @@
 		65953AEE2B79544F00C80BB1 /* CategorisCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65953AEC2B79544F00C80BB1 /* CategorisCollectionCell.swift */; };
 		65953AEF2B79544F00C80BB1 /* CategorisCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65953AED2B79544F00C80BB1 /* CategorisCollectionCell.xib */; };
 		65953AF22B795A7C00C80BB1 /* CategorisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65953AF12B795A7C00C80BB1 /* CategorisVC.swift */; };
+		659645EA2B8D470300ACD3F5 /* SearchProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659645E92B8D470300ACD3F5 /* SearchProductsVC.swift */; };
+		659645ED2B8D499B00ACD3F5 /* ForgotPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659645EC2B8D499B00ACD3F5 /* ForgotPassVC.swift */; };
+		659645EF2B8D4C3800ACD3F5 /* VerificationCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659645EE2B8D4C3800ACD3F5 /* VerificationCodeVC.swift */; };
+		659645F12B8D502100ACD3F5 /* CreateNewPassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659645F02B8D502100ACD3F5 /* CreateNewPassVC.swift */; };
+		659645F62B8E2C5900ACD3F5 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659645F52B8E2C5900ACD3F5 /* AuthInteractor.swift */; };
+		659645F92B8E2CA000ACD3F5 /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659645F82B8E2CA000ACD3F5 /* TokenModel.swift */; };
 		65984BEC2B5869DB0001CC35 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65984BEB2B5869DB0001CC35 /* HomeStoryboard.storyboard */; };
 		65A0229A2B7C038200E555B7 /* ProdOfCatagories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A022992B7C038200E555B7 /* ProdOfCatagories.swift */; };
 		65BE9BF62B6722D700735660 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BE9BF42B6722D700735660 /* OrderTableViewCell.swift */; };
@@ -218,6 +224,12 @@
 		65953AEC2B79544F00C80BB1 /* CategorisCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorisCollectionCell.swift; sourceTree = "<group>"; };
 		65953AED2B79544F00C80BB1 /* CategorisCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorisCollectionCell.xib; sourceTree = "<group>"; };
 		65953AF12B795A7C00C80BB1 /* CategorisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorisVC.swift; sourceTree = "<group>"; };
+		659645E92B8D470300ACD3F5 /* SearchProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductsVC.swift; sourceTree = "<group>"; };
+		659645EC2B8D499B00ACD3F5 /* ForgotPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassVC.swift; sourceTree = "<group>"; };
+		659645EE2B8D4C3800ACD3F5 /* VerificationCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeVC.swift; sourceTree = "<group>"; };
+		659645F02B8D502100ACD3F5 /* CreateNewPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPassVC.swift; sourceTree = "<group>"; };
+		659645F52B8E2C5900ACD3F5 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		659645F82B8E2CA000ACD3F5 /* TokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		65984BEB2B5869DB0001CC35 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		65A022992B7C038200E555B7 /* ProdOfCatagories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdOfCatagories.swift; sourceTree = "<group>"; };
 		65BE9BF42B6722D700735660 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -359,6 +371,7 @@
 				6559BF682B75578200CE8F83 /* HomeVC */,
 				6559BF6A2B7557A200CE8F83 /* AddToOrderVC */,
 				6559BF672B75577A00CE8F83 /* ProductsMenuVC */,
+				659645E92B8D470300ACD3F5 /* SearchProductsVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,8 +506,10 @@
 		6566F6EC2B5810E6000EC918 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6566F6ED2B581402000EC918 /* LoginVC.swift */,
-				6566F6EF2B581485000EC918 /* AuthPresenter.swift */,
+				659645F72B8E2C8700ACD3F5 /* Models */,
+				659645F32B8E1C9700ACD3F5 /* Presenter */,
+				659645F22B8E1C8800ACD3F5 /* Interactor */,
+				659645EB2B8D498D00ACD3F5 /* Views */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -626,6 +641,41 @@
 				650BAD422B7BD8E700071AAA /* MyHeaderCollectionReusableView.xib */,
 			);
 			path = CategorisCollectionCell;
+			sourceTree = "<group>";
+		};
+		659645EB2B8D498D00ACD3F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6566F6ED2B581402000EC918 /* LoginVC.swift */,
+				659645EC2B8D499B00ACD3F5 /* ForgotPassVC.swift */,
+				659645EE2B8D4C3800ACD3F5 /* VerificationCodeVC.swift */,
+				659645F02B8D502100ACD3F5 /* CreateNewPassVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		659645F22B8E1C8800ACD3F5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				659645F52B8E2C5900ACD3F5 /* AuthInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		659645F32B8E1C9700ACD3F5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6566F6EF2B581485000EC918 /* AuthPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		659645F72B8E2C8700ACD3F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				659645F82B8E2CA000ACD3F5 /* TokenModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		65984BEA2B5869CB0001CC35 /* Home */ = {
@@ -785,12 +835,14 @@
 				65953AEE2B79544F00C80BB1 /* CategorisCollectionCell.swift in Sources */,
 				656AC8B52B4F516B008833C0 /* UIColor+Additions.swift in Sources */,
 				6559BF752B793CDA00CE8F83 /* HomePresenter.swift in Sources */,
+				659645ED2B8D499B00ACD3F5 /* ForgotPassVC.swift in Sources */,
 				65BE9BF62B6722D700735660 /* OrderTableViewCell.swift in Sources */,
 				656AC8DB2B4F55D8008833C0 /* OnboradingImagesVC.swift in Sources */,
 				650BAD482B7C006400071AAA /* ProdOfCatogriesCollectionsCell.swift in Sources */,
 				656AC8B82B4F516B008833C0 /* UITextView+Extention.swift in Sources */,
 				656AC8BE2B4F516B008833C0 /* UICollectionView+TableFlip.swift in Sources */,
 				65FF8F8D2B671C77007C1D26 /* AddToOrderVC.swift in Sources */,
+				659645EA2B8D470300ACD3F5 /* SearchProductsVC.swift in Sources */,
 				65D718FE2B66917C00DA3F54 /* HomeTableViewCell.swift in Sources */,
 				656AC8B22B4F516B008833C0 /* SaudiIDNumberValidator.swift in Sources */,
 				656AC8B62B4F516B008833C0 /* Utils.swift in Sources */,
@@ -827,12 +879,14 @@
 				656AC8C32B4F516B008833C0 /* String+Extension.swift in Sources */,
 				65A0229A2B7C038200E555B7 /* ProdOfCatagories.swift in Sources */,
 				656AC8C42B4F516B008833C0 /* UITextField+Additions.swift in Sources */,
+				659645EF2B8D4C3800ACD3F5 /* VerificationCodeVC.swift in Sources */,
 				656AC8CD2B4F516B008833C0 /* BlockTap.swift in Sources */,
 				656AC88E2B4F5132008833C0 /* ColorsExtension.swift in Sources */,
 				6559BF702B75593B00CE8F83 /* HomeInteractor.swift in Sources */,
 				656AC8D32B4F51A8008833C0 /* UiColor+extensions.swift in Sources */,
 				656AC8C82B4F516B008833C0 /* UIImageView+Kingfisher.swift in Sources */,
 				656AC8F32B4F5C06008833C0 /* UserDefaultConstants.swift in Sources */,
+				659645F92B8E2CA000ACD3F5 /* TokenModel.swift in Sources */,
 				656AC8C02B4F516B008833C0 /* PDFDownloadViewController.swift in Sources */,
 				656AC8D12B4F51A0008833C0 /* ValidationHelper.swift in Sources */,
 				655FFE8C2B672C9500A1EB0C /* ItemAddedPopUp.swift in Sources */,
@@ -842,10 +896,12 @@
 				65D92A522B6867C40024501A /* OrdersPageTableViewCell.swift in Sources */,
 				656AC8C22B4F516B008833C0 /* UserDefaultManger.swift in Sources */,
 				6566F6F02B581485000EC918 /* AuthPresenter.swift in Sources */,
+				659645F12B8D502100ACD3F5 /* CreateNewPassVC.swift in Sources */,
 				6566F6EE2B581402000EC918 /* LoginVC.swift in Sources */,
 				656AC8C62B4F516B008833C0 /* UIViewController+Additions.swift in Sources */,
 				656AC8B92B4F516B008833C0 /* TableView+Extension.swift in Sources */,
 				6502A5152B84B53E0077DA7F /* HomeSectionHeaderView.swift in Sources */,
+				659645F62B8E2C5900ACD3F5 /* AuthInteractor.swift in Sources */,
 				656AC8C92B4F516B008833C0 /* UITableView+TableFlip.swift in Sources */,
 				656AC8BF2B4F516B008833C0 /* BaseVC.swift in Sources */,
 				656AC8BB2B4F516B008833C0 /* AppLanguague.swift in Sources */,

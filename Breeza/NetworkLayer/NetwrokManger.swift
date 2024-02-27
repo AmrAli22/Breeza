@@ -34,11 +34,7 @@ class NetworkingManager {
         var ComputedUrl = APIUrlsConstants.APIMainURL + url
         
         if let Appendedparams = Appendedparams {
-//            ComputedUrl += "&"
-//            ComputedUrl += "\(Appendedparams)"
-            
             ComputedUrl = buildURL(baseURL: ComputedUrl , parameters: Appendedparams as! [String : Any]) ?? ComputedUrl
-            
         }
   
         let AddedParms = params
@@ -56,15 +52,7 @@ class NetworkingManager {
                     return
                 }
                 
-                
-                
                 if response.response?.statusCode == 401 {
-                    // If the status code is 401, attempt to refresh the token
-                    
-                    
-                    
-                  //  newrefresh(refreshToken: UserDefaultsManager.instance.getRefreshToken() ?? "")
-                    
                     if refreshTokenAttempts < maxRefreshTokenAttempts {
                         refreshTokenAttempts += 1
                         newrefresh { success in
@@ -200,39 +188,62 @@ class NetworkingManager {
         let Basicheaders: HTTPHeaders = [
             "Content-Type": "application/json",
             "accept": "*/*",
-            "Cookie": "DCSToken=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6OSwibmFtZSI6InRoZWFtcmFsaSIsInN1YiI6IjkiLCJpYXQiOjE3MDU1MTkwODEsImV4cCI6MTcwNTUyNjI4MX0.Pa4FA8IEHU1ThEGpJl5DN20xC1YayFGiNH8Pys2lAXbk68ZOmguHbbsUzmvENNodayz2cL9gGe157uoRg308pw"
+//            "Cookie": "DCSToken=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6OSwibmFtZSI6InRoZWFtcmFsaSIsInN1YiI6IjkiLCJpYXQiOjE3MDU1MTkwODEsImV4cCI6MTcwNTUyNjI4MX0.Pa4FA8IEHU1ThEGpJl5DN20xC1YayFGiNH8Pys2lAXbk68ZOmguHbbsUzmvENNodayz2cL9gGe157uoRg308pw"
         ]
         
         var ComputedUrl = APIUrlsConstants.APIMainURL + url
         
+        if let Appendedparams = Appendedparams {
+            ComputedUrl = buildURL(baseURL: ComputedUrl , parameters: Appendedparams as! [String : Any]) ?? ComputedUrl
+        }
+        
         AF.request(ComputedUrl , method: method,parameters: params ?? [:], encoding: encoding, headers: Basicheaders)
             .responseJSON(completionHandler: {  response in
-     
                 
-            switch response.result {
-            case .success(let data):
-
-                    if response.response?.statusCode == 200 {
-                        successHandler(response.data)
-                        return
-                    } else {
+                
+                if (response.response?.statusCode == 200 ) || (response.response?.statusCode == 201 ) {
+                    successHandler(response.data)
+                    
+                    return
+                } else {
+                    
+                    if ((response.value as? [String : Any]) != nil){
                         
-                        if ((response.value as? [String : Any]) != nil){
-                            
-                            let error = ErrorResponse(error: response.value as! [String : Any])
-                            errorHandler(error)
-                            return
-                        }else{
-                            let error = ErrorResponse(message: "please_check_your_internet_connection_and_try_again".localized())
-                            errorHandler(error)
-                            return
-                        }
+                        let error = ErrorResponse(error: response.value as! [String : Any])
+                        errorHandler(error)
+                        return
+                    }else{
+                        let error = ErrorResponse(message: "please_check_your_internet_connection_and_try_again".localized())
+                        errorHandler(error)
+                        return
                     }
-            case .failure(let error):
-                let error = ErrorResponse(message: error.localizedDescription)
-                errorHandler(error)
-                return
-            }
+                }
+                
+                
+//                switch response.response?.statusCode == 200 {
+//            case .success(let data):
+//
+//                    if response.response?.statusCode == 200 {
+//                        successHandler(response.data)
+//                        return
+//                    } else {
+//                        
+//                        if ((response.value as? [String : Any]) != nil){
+//                            
+//                            let error = ErrorResponse(error: response.value as! [String : Any])
+//                            errorHandler(error)
+//                            return
+//                        }else{
+//                            let error = ErrorResponse(message: "please_check_your_internet_connection_and_try_again".localized())
+//                            errorHandler(error)
+//                            return
+//                        }
+//                    }
+//            case .failure(let error):
+//                let error = ErrorResponse(message: error.localizedDescription)
+//                errorHandler(error)
+//                return
+//            }
         }
     )}
 }

@@ -17,8 +17,6 @@ class LoginVC: BaseVC{
     @IBOutlet weak var AlertLabel: UIButton!
     @IBOutlet weak var loginBtnConstraint: NSLayoutConstraint!
     
-    
-    
     var presenter  : AuthPresenter!
     
     var originalloginStackViewY = 0.0
@@ -60,7 +58,7 @@ class LoginVC: BaseVC{
     }
     
     @IBAction func ForgotPassBtnPressed(_ sender: Any) {
-        
+        self.navigationController?.pushViewController(ForgotPassVC.buildVC(pres: self.presenter), animated: true)
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
@@ -130,6 +128,18 @@ class LoginVC: BaseVC{
 }
 
 extension LoginVC : AuthView {
+    func successForgotPass() {
+        
+    }
+    
+    func successVerfCode() {
+        
+    }
+    
+    func successChangePass() {
+        
+    }
+    
     func showSpinner() {
         showLoader()
     }
@@ -155,7 +165,4 @@ extension LoginVC : AuthView {
             self.showAlert(title: "Success".localized(), withMessage: "")
         }
     }
-    
-    
-    
 }
