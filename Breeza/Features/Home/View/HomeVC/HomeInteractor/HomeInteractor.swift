@@ -13,9 +13,9 @@ struct HomeInteractor {
     
     
     typealias LowestStockItemsComplation = (_ LowestStockItems: HomeProductModel?, _ error: ErrorResponse?) -> ()
-    func GetHomeProducts(homeProudctsType : Int ,currentPage : Int ,completion: @escaping LowestStockItemsComplation) {
+    func GetHomeProducts(search : String? = nil ,homeProudctsType : Int ,currentPage : Int ,completion: @escaping LowestStockItemsComplation) {
         
-        let params: [String: Any] = [
+        var params: [String: Any] = [
             "sortByLowestStock": homeProudctsType == 0,
             "sortByExpirySoon" : homeProudctsType != 0,
             "underMinimum": false
@@ -26,6 +26,13 @@ struct HomeInteractor {
             "size" : 10
         ]
 
+        
+        if let search = search {
+            params.updateValue(search, forKey: "productName")
+            params.updateValue(false, forKey: "sortByLowestStock")
+            params.updateValue(false, forKey: "sortByExpirySoon")
+        }
+        
         NetworkingManager.sendRequestAuth(method: .post, url: APIUrlsConstants.homeProducts , params: params , Appendedparams: pageinig ,encoding: JSONEncoding.default) { data in
             do {
                 

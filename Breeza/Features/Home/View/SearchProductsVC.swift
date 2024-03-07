@@ -123,6 +123,10 @@ extension SearchProductsVC : UITableViewDelegate ,UITableViewDataSource {
 }
 
 extension SearchProductsVC : homeView {
+    func SuccessSearchableContent() {
+        
+    }
+    
     func showSpinner() {
         showLoader()
     }

@@ -6,13 +6,15 @@
 //
 
 import UIKit
-
-class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+import FittedSheets
+class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , UISearchBarDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     var isLoading: Bool = false
-
+    var currentSearch = ""
+    var debounceTimer: Timer?
     var presenter                : CategorisPresenter!
 
     public class func buildVC(pres : CategorisPresenter) -> ProdOfCatagories {
@@ -38,13 +40,68 @@ class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, U
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.navigationBar.topItem?.leftBarButtonItem?.tintColor = .clear
         self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = .clear
-        self.presenter.FilterProducts()
+        self.presenter.FilterProducts(searchKey: "")
+        searchBar.returnKeyType = .default
+        searchBar.delegate = self
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.presenter.categorisView = self
         
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // This method is called when the user taps the return key on the keyboard
+        // Add your custom return key action here
+        print("Return key clicked")
+
+        // Close the keyboard
+        searchBar.resignFirstResponder()
+    }
+    @IBOutlet weak var openFiltersView: UIView!
+    
+    @IBAction func openFiltersAction(_ sender: Any) {
+        
+        let controller = FiltrationVC.buildVC()
+        
+        let useInlineMode = view != nil
+        
+        var options = SheetOptions()
+        options.pullBarHeight = 30
+        options.shouldExtendBackground = false
+        options.useInlineMode = useInlineMode
+        options.useFullScreenMode = false
+        
+        let sheet = SheetViewController(controller: controller, sizes: [.percent(0.7), .fullscreen], options: options)
+        
+        sheet.treatPullBarAsClear = true
+        sheet.minimumSpaceAbovePullBar = 20
+        sheet.cornerRadius = 30
+        sheet.gripSize = CGSize(width: 100, height: 12)
+        
+        if let view = view {
+            sheet.animateIn(to: view, in: self)
+        } else {
+            self.present(sheet, animated: true, completion: nil)
+        }
+    }
+        
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        debounceTimer?.invalidate()
+        debounceTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self]  _ in
+            guard let self = self else{return}
+            self.presenter.resetData()
+            self.currentSearch = searchText
+            self.fetchDataFromAPI(searchText)
+        }
+    }
+    
+    func fetchDataFromAPI(_ searchText: String) {
+        currentSearch = searchText
+        self.presenter.FilterProducts(searchKey: searchText)
     }
     
     
@@ -80,7 +137,7 @@ class ProdOfCatagories: BaseVC, UITableViewDelegate, UICollectionViewDelegate, U
     func loadMoreData() {
         guard !isLoading else { return }
         isLoading = true
-        self.presenter.FilterProducts()
+        self.presenter.FilterProducts(searchKey: currentSearch)
     }
     
 

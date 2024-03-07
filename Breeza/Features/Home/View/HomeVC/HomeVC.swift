@@ -6,7 +6,7 @@
 
 import UIKit
 
-class HomeVC: BaseVC {
+class HomeVC: BaseVC , UISearchBarDelegate {
 
     @IBOutlet weak var tableView : UITableView!
     var presenter                : homePresenter!
@@ -47,7 +47,15 @@ class HomeVC: BaseVC {
         self.presenter.getLowestStockHomeProducts()
     }
     
- 
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+            // This method is called when the search bar becomes the first responder
+            print("Search bar did begin editing")
+        self.navigationController?.pushViewController(SearchableDataVC.buildVC(pres: self.presenter), animated: true)
+            // Add your custom logic here
+        }
+    
+    
     
     @IBAction func logout(_ sender: Any) {
         
@@ -126,6 +134,10 @@ extension HomeVC : UITableViewDelegate ,UITableViewDataSource {
 }
 
 extension HomeVC : homeView {
+    func SuccessSearchableContent() {
+        
+    }
+    
     func showSpinner() {
         showLoader()
     }

@@ -35,8 +35,6 @@ class ProductsMenuVC: BaseVC {
         tableView.dataSource = self
         tableView.delegate   = self
         
-        
-        
         let nibHomeTableViewCell = UINib(nibName: "ProductsMenuTableViewCell", bundle: nil)
         tableView.register(nibHomeTableViewCell, forCellReuseIdentifier: "ProductsMenuTableViewCell")
         
@@ -84,7 +82,7 @@ extension ProductsMenuVC : UITableViewDelegate ,UITableViewDataSource {
         
         cell.didPressAddToCartAction = { [weak self] () in
             guard let self = self else { return  }
-            self.navigationController?.pushViewController(AddToOrderVC.buildVC() , animated: true)
+            self.navigationController?.pushViewController(chooseSupplierVC.buildVC() , animated: true)
         }
         
         
@@ -119,6 +117,10 @@ extension ProductsMenuVC : UITableViewDelegate ,UITableViewDataSource {
 }
 
 extension ProductsMenuVC :homeView {
+    func SuccessSearchableContent() {
+        
+    }
+    
     func showSpinner() {
         showLoader()
     }

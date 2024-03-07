@@ -60,6 +60,9 @@ class CategorisPresenter {
         
     }
     
+    
+    
+    
     //MARK: - GetLowestStock
     func getCatogrs(){
         self.categorisView?.showSpinner()
@@ -123,10 +126,10 @@ class CategorisPresenter {
     
 
     //MARK: - GetLowestStock
-    func FilterProducts(){
+    func FilterProducts(searchKey: String){
         self.categorisView?.showSpinner()
         
-        categorisInteractor.GetFiltredProducts(selectedCatg: selectedCat, selectedBrand: selectedBrand, selectedSupplier: selectedSupplier, currentPage: currentPage) { [weak self ] (newItems, error) in
+        categorisInteractor.GetFiltredProducts(selectedCatg: selectedCat, selectedBrand: selectedBrand, selectedSupplier: selectedSupplier, currentPage: currentPage, searchKey: searchKey) { [weak self ] (newItems, error) in
 
             guard let self = self else { return }
             self.categorisView?.hideSpinner()

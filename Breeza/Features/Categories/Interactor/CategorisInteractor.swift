@@ -82,7 +82,7 @@ struct CategorisInteractor {
 
     
     typealias FiltredItemsComplation = (_ Items: HomeProductModel?, _ error: ErrorResponse?) -> ()
-    func GetFiltredProducts(selectedCatg : Int? , selectedBrand : Int? , selectedSupplier : Int? ,currentPage : Int ,completion: @escaping FiltredItemsComplation) {
+    func GetFiltredProducts(selectedCatg : Int? , selectedBrand : Int? , selectedSupplier : Int? ,currentPage : Int ,searchKey : String ,completion: @escaping FiltredItemsComplation) {
         
         var  params: [String: Any] = [
             "sortByLowestStock": false,
@@ -106,6 +106,11 @@ struct CategorisInteractor {
             "page" : currentPage ,
             "size" : 10
         ]
+        
+        
+        if searchKey != "" {
+            params.updateValue(searchKey, forKey: "productName")
+        }
 
         NetworkingManager.sendRequestAuth(method: .post, url: APIUrlsConstants.homeProducts , params: params , Appendedparams: pageinig ,encoding: JSONEncoding.default) { data in
             do {

@@ -37,43 +37,17 @@ class VerificationCodeVC: BaseVC , UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-             verfCodeOne.delegate = self
-             verfCodeTwo.delegate = self
-             verfCodeThree.delegate = self
-             verfCodeFour.delegate = self
-
-             // Add target to each UITextField to handle editing change
-             verfCodeOne.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-             verfCodeTwo.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-             verfCodeThree.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-             verfCodeFour.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-         }
-
-         // UITextFieldDelegate method to limit to one character and move to the next UITextField
-         func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-             let currentText = textField.text ?? ""
-             let newLength = currentText.count + string.count - range.length
-
-             if newLength <= 1 {
-                 if let nextTextField = view.viewWithTag(textField.tag + 1) as? UITextField {
-                     textField.text = string
-                     nextTextField.becomeFirstResponder()
-                 }
-                 return false
-             } else {
-                 return false
-             }
-         }
-
-         // Handle editing change to move the cursor when the length is one
-         @objc func textFieldDidChange(_ textField: UITextField) {
-             if let text = textField.text, text.count == 1 {
-                 if let nextTextField = view.viewWithTag(textField.tag + 1) as? UITextField {
-                     nextTextField.becomeFirstResponder()
-                 }
-             }
-         }
+        verfCodeOne.delegate = self
+        verfCodeTwo.delegate = self
+        verfCodeThree.delegate = self
+        verfCodeFour.delegate = self
+        
+    }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Check if the new string has only one character
+        return string.count <= 1
+    }
     
     @IBAction func resetPassPressed(_ sender: Any) {
         
@@ -85,6 +59,7 @@ class VerificationCodeVC: BaseVC , UITextFieldDelegate{
                 resetCode += verfCodeTwo.text   ?? ""
                 resetCode += verfCodeThree.text ?? ""
                 resetCode += verfCodeFour.text  ?? ""
+            
             self.presenter.confrimCode(resetCode: resetCode)
         }
     }

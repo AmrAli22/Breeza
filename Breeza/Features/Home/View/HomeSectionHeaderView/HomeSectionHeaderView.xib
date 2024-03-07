@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Inter-Regular.otf">
-            <string>Inter-Regular</string>
-        </array>
         <array key="Inter-SemiBold.otf">
             <string>Inter-SemiBold</string>
+        </array>
+        <array key="Inter[slnt,wght].ttf">
+            <string>Inter-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -28,16 +28,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="509" height="99"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="baC-Q2-uCK">
-                            <rect key="frame" x="24" y="34.666666666666664" width="461" height="29.999999999999993"/>
+                            <rect key="frame" x="10" y="34.666666666666664" width="489" height="29.999999999999993"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFz-aR-Xpk">
-                                    <rect key="frame" x="0.0" y="5.3333333333333357" width="391" height="19.333333333333332"/>
+                                    <rect key="frame" x="0.0" y="5.3333333333333357" width="419" height="19.333333333333332"/>
                                     <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="16"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-VB-zrE">
-                                    <rect key="frame" x="401" y="0.0" width="60" height="30"/>
+                                    <rect key="frame" x="429" y="0.0" width="60" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="UWz-0O-YRQ"/>
                                         <constraint firstAttribute="width" constant="60" id="eJf-Lx-LaQ"/>
@@ -61,9 +61,9 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="baC-Q2-uCK" firstAttribute="centerY" secondItem="dvp-ea-46L" secondAttribute="centerY" id="MDz-RR-QtV"/>
-                        <constraint firstAttribute="trailing" secondItem="baC-Q2-uCK" secondAttribute="trailing" constant="24" id="cVe-9n-6qf"/>
+                        <constraint firstAttribute="trailing" secondItem="baC-Q2-uCK" secondAttribute="trailing" constant="10" id="cVe-9n-6qf"/>
                         <constraint firstItem="baC-Q2-uCK" firstAttribute="centerX" secondItem="dvp-ea-46L" secondAttribute="centerX" id="pcC-sn-hr1"/>
-                        <constraint firstItem="baC-Q2-uCK" firstAttribute="leading" secondItem="dvp-ea-46L" secondAttribute="leading" constant="24" id="q2Q-WR-eyX"/>
+                        <constraint firstItem="baC-Q2-uCK" firstAttribute="leading" secondItem="dvp-ea-46L" secondAttribute="leading" constant="10" id="q2Q-WR-eyX"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -97,7 +97,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

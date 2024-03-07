@@ -18,11 +18,11 @@
         <array key="Inter-Medium.otf">
             <string>Inter-Medium</string>
         </array>
-        <array key="Inter-Regular.otf">
-            <string>Inter-Regular</string>
-        </array>
         <array key="Inter-SemiBold.otf">
             <string>Inter-SemiBold</string>
+        </array>
+        <array key="Inter[slnt,wght].ttf">
+            <string>Inter-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -72,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzJ-NE-UQP">
-                                <rect key="frame" x="185.33333333333334" y="416.33333333333331" width="22.666666666666657" height="19.333333333333314"/>
+                                <rect key="frame" x="185.33333333333334" y="416.33333333333331" width="22.666666666666657" height="19.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254901960782" green="0.6588235294117647" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zim-c3-r8h">
-                                <rect key="frame" x="26" y="455.66666666666674" width="331" height="188"/>
+                                <rect key="frame" x="26" y="456" width="331" height="188"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xud-M4-UOA">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="56"/>
@@ -121,7 +121,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google" translatesAutoresizingMaskIntoConstraints="NO" id="Ml3-zl-SS7">
-                                                <rect key="frame" x="20" y="15.666666666666629" width="25" height="25"/>
+                                                <rect key="frame" x="20" y="15.333333333333314" width="25" height="25"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="3C0-Cy-nXi"/>
@@ -140,7 +140,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFc-gy-iex">
-                                        <rect key="frame" x="0.0" y="65.999999999999943" width="331" height="56"/>
+                                        <rect key="frame" x="0.0" y="66" width="331" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iP-of-HiF">
                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="56"/>
@@ -185,7 +185,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rd2-Ot-aOO">
-                                        <rect key="frame" x="0.0" y="131.99999999999994" width="331" height="56"/>
+                                        <rect key="frame" x="0.0" y="132" width="331" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb1-6c-qv3">
                                                 <rect key="frame" x="0.0" y="0.0" width="331" height="56"/>
@@ -211,7 +211,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="aa6-3n-v3H">
-                                                <rect key="frame" x="20" y="15.666666666666742" width="25" height="25"/>
+                                                <rect key="frame" x="20" y="15.333333333333371" width="25" height="25"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="2hF-Vc-gm8"/>
@@ -704,7 +704,7 @@ into medidoc app</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHb-Vc-Y4Z">
-                                <rect key="frame" x="20" y="264" width="353" height="56"/>
+                                <rect key="frame" x="20" y="264.66666666666669" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cZ6-HF-Bj0"/>
@@ -724,7 +724,7 @@ into medidoc app</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OhI-Kb-z24">
-                                <rect key="frame" x="24" y="179" width="345" height="65"/>
+                                <rect key="frame" x="24" y="179.66666666666666" width="345" height="65"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwg-iP-yMZ">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="65"/>
@@ -754,7 +754,7 @@ into medidoc app</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your email or your phone number, we will send you confirmation code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-ie-FIb">
-                                <rect key="frame" x="24" y="120.66666666666667" width="345" height="38.333333333333329"/>
+                                <rect key="frame" x="24" y="120.66666666666669" width="345" height="39"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254899999995" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -802,7 +802,7 @@ into medidoc app</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyn-04-AjD">
-                                <rect key="frame" x="20" y="284" width="353" height="56"/>
+                                <rect key="frame" x="20" y="284.33333333333331" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cvS-O3-NiX"/>
@@ -822,9 +822,9 @@ into medidoc app</string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="bg9-yq-O2a">
-                                <rect key="frame" x="24" y="180" width="345" height="64"/>
+                                <rect key="frame" x="24" y="180.33333333333334" width="345" height="64"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTL-Yg-mvx">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FTL-Yg-mvx">
                                         <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="64"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -835,7 +835,7 @@ into medidoc app</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-rq-Uit">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpC-rq-Uit">
                                         <rect key="frame" x="92.333333333333343" y="0.0" width="68.333333333333343" height="64"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -846,7 +846,7 @@ into medidoc app</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Fk-ny-mUT">
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Fk-ny-mUT">
                                         <rect key="frame" x="184.66666666666666" y="0.0" width="68" height="64"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -857,7 +857,7 @@ into medidoc app</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-pe-aDb">
+                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-pe-aDb">
                                         <rect key="frame" x="276.66666666666669" y="0.0" width="68.333333333333314" height="64"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
@@ -874,22 +874,22 @@ into medidoc app</string>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter code that we have sent to your email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8D-3H-QNR">
-                                <rect key="frame" x="20" y="120.66666666666667" width="353" height="19.333333333333329"/>
+                                <rect key="frame" x="20" y="120.66666666666667" width="353" height="19.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254899999995" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F2j-pf-Cn7">
-                                <rect key="frame" x="77.333333333333329" y="360" width="238.66666666666669" height="30"/>
+                                <rect key="frame" x="77.333333333333329" y="360.33333333333331" width="238.66666666666669" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn’t receive the code? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xog-RY-FOJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="175.66666666666666" height="31"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrW-zK-PjI">
-                                        <rect key="frame" x="185.66666666666669" y="0.0" width="53" height="30"/>
+                                        <rect key="frame" x="185.66666666666669" y="0.0" width="53" height="31"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Resend">
@@ -947,7 +947,7 @@ into medidoc app</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUh-RX-Hrv">
-                                <rect key="frame" x="20" y="326" width="353" height="56"/>
+                                <rect key="frame" x="20" y="326.33333333333331" width="353" height="56"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.39607843139999999" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="iLZ-dV-qXL"/>
@@ -967,19 +967,19 @@ into medidoc app</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your new password to login " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2u-9e-k51">
-                                <rect key="frame" x="20" y="120.66666666666667" width="353" height="19.333333333333329"/>
+                                <rect key="frame" x="20" y="120.66666666666667" width="353" height="19.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                 <color key="textColor" red="0.63137254899999995" green="0.6588235294" blue="0.69019607839999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-if-dZa">
-                                <rect key="frame" x="20" y="160" width="353" height="146"/>
+                                <rect key="frame" x="20" y="160.33333333333334" width="353" height="146.00000000000003"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-9n-vyI">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="65"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tAg-yb-ybm">
-                                                <rect key="frame" x="16" y="22" width="273" height="21"/>
+                                                <rect key="frame" x="16" y="22" width="273" height="21.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -1015,12 +1015,12 @@ into medidoc app</string>
                                         <rect key="frame" x="0.0" y="81" width="353" height="65"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjA-8l-CgR">
-                                                <rect key="frame" x="16" y="22.666666666666686" width="273" height="20"/>
+                                                <rect key="frame" x="16" y="22.666666666666657" width="273" height="20"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc8-rk-Xcz">
-                                                <rect key="frame" x="305" y="20.666666666666686" width="24" height="24"/>
+                                                <rect key="frame" x="305" y="20.666666666666657" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="pjz-dk-Ban"/>
                                                     <constraint firstAttribute="height" constant="24" id="rSR-Py-oye"/>
@@ -1047,7 +1047,7 @@ into medidoc app</string>
                                 </subviews>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwY-sd-5uZ">
-                                <rect key="frame" x="20" y="402" width="192" height="26"/>
+                                <rect key="frame" x="20" y="402.33333333333331" width="192" height="26"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="11"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="*The password you entered is wrong">
@@ -1096,7 +1096,7 @@ into medidoc app</string>
         <image name="Google" width="20" height="20"/>
         <image name="Password 1" width="24" height="24"/>
         <image name="Splash" width="158" height="89"/>
-        <image name="apple.logo" catalog="system" width="105" height="128"/>
+        <image name="apple.logo" catalog="system" width="32" height="32"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <namedColor name="DEDEDE">
             <color red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
